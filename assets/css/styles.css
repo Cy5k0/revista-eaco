@@ -76,6 +76,12 @@ body {
   letter-spacing: 1px;
 }
 
+.navbar-title {
+  font-family: 'Kaushan Script', cursive !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
 .navbar-menu {
   display: flex;
   list-style: none;
