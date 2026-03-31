@@ -10,27 +10,6 @@
 
     <title>Voces en Papel | Revista Escolar</title>
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Configuración personalizada de Tailwind -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'vp-amarillo': '#E7E78A',
-                        'vp-azul-oscuro': '#07074C',
-                        'vp-gris-azulado': '#5F5F83',
-                        'vp-lavanda': '#79789C',
-                        'vp-verde-gris': '#7C8470',
-                        'vp-morado-gris': '#847C94',
-                    }
-                }
-            }
-        }
-    </script>
-
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -61,248 +40,231 @@
 <body>
 
     <!-- ========================================
-       NAVBAR COMPONENT
+       NAVBAR COMPONENT CONTAINER
        ======================================== -->
-    <nav class="navbar" id="navbar">
-        <div class="navbar-container">
-            <a href="index.html" class="navbar-logo">
-                <img src="assets/img/Logo.png" alt="Voces en Papel Logo">
-                <span>Voces en Papel</span>
-            </a>
+    <div id="navbar-container"></div>
 
-            <ul class="navbar-menu" id="navbar-menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#destacados">Artículos</a></li>
-                <li><a href="#categorias">Categorías</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-
-            <div class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
+    <main>
+        <!-- ========================================
+           HERO SECTION
+           ======================================== -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="hero-badge">📰 Edición #47 - Marzo 2025</span>
+                <h1>Voces en Papel</h1>
+                <p>La revista escolar que conecta historias, ideas y creatividad.
+                    Descubre las voces que dan vida a nuestra comunidad educativa.</p>
+                <div class="hero-cta">
+                    <a href="#destacados" class="btn btn-primary">Leer Artículos</a>
+                    <a href="#nosotros" class="btn btn-secondary">Conócenos</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- ========================================
-       HERO SECTION
-       ======================================== -->
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <span class="hero-badge">📰 Edición #47 - Marzo 2025</span>
-            <h1>Voces en Papel</h1>
-            <p>La revista escolar que conecta historias, ideas y creatividad.
-                Descubre las voces que dan vida a nuestra comunidad educativa.</p>
-            <div class="hero-cta">
-                <a href="#destacados" class="btn btn-primary">Leer Artículos</a>
-                <a href="#nosotros" class="btn btn-secondary">Conócenos</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- ========================================
+        <!-- ========================================
        ARTÍCULOS DESTACADOS
        ======================================== -->
-    <section class="section" id="destacados">
-        <div class="section-header">
-            <h2>Artículos Destacados</h2>
-            <p>Las mejores historias escritas por nuestros estudiantes</p>
-        </div>
+        <section class="section" id="destacados">
+            <div class="section-header">
+                <h2>Artículos Destacados</h2>
+                <p>Las mejores historias escritas por nuestros estudiantes</p>
+            </div>
 
-        <div class="featured-grid">
-            <!-- Artículo 1 -->
-            <article class="article-card">
-                <img src="https://picsum.photos/seed/cultura1/600/400" alt="Artículo cultura" class="article-card-image"
-                    loading="lazy">
-                <div class="article-card-content">
-                    <span class="article-card-category">Cultura</span>
-                    <h3>El renacimiento del arte urbano en nuestra ciudad</h3>
-                    <p>Exploramos cómo los jóvenes artistas están transformando los espacios públicos con murales que
-                        cuentan historias.</p>
-                    <div class="article-card-meta">
-                        <span>📅 Mar 25, 2025</span>
-                        <a href="#" class="article-card-link">Leer más →</a>
+            <div class="featured-grid">
+                <!-- Artículo 1 -->
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/cultura1/600/400" alt="Artículo cultura"
+                        class="article-card-image" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Cultura</span>
+                        <h3>El renacimiento del arte urbano en nuestra ciudad</h3>
+                        <p>Exploramos cómo los jóvenes artistas están transformando los espacios públicos con murales
+                            que
+                            cuentan historias.</p>
+                        <div class="article-card-meta">
+                            <span>📅 Mar 25, 2025</span>
+                            <a href="#" class="article-card-link">Leer más →</a>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Artículo 2 -->
-            <article class="article-card">
-                <img src="https://picsum.photos/seed/ciencia1/600/400" alt="Artículo ciencia" class="article-card-image"
-                    loading="lazy">
-                <div class="article-card-content">
-                    <span class="article-card-category">Ciencia</span>
-                    <h3>Proyecto estudiantil: Energía solar para el futuro</h3>
-                    <p>Nuestros estudiantes de física desarrollan un prototipo innovador de paneles solares de bajo
-                        costo.</p>
-                    <div class="article-card-meta">
-                        <span>📅 Mar 22, 2025</span>
-                        <a href="#" class="article-card-link">Leer más →</a>
+                <!-- Artículo 2 -->
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/ciencia1/600/400" alt="Artículo ciencia"
+                        class="article-card-image" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Ciencia</span>
+                        <h3>Proyecto estudiantil: Energía solar para el futuro</h3>
+                        <p>Nuestros estudiantes de física desarrollan un prototipo innovador de paneles solares de bajo
+                            costo.</p>
+                        <div class="article-card-meta">
+                            <span>📅 Mar 22, 2025</span>
+                            <a href="#" class="article-card-link">Leer más →</a>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Artículo 3 -->
-            <article class="article-card">
-                <img src="https://picsum.photos/seed/deportes1/600/400" alt="Artículo deportes"
-                    class="article-card-image" loading="lazy">
-                <div class="article-card-content">
-                    <span class="article-card-category">Deportes</span>
-                    <h3>Campeonato interescolar: Nuestras estrellas brillan</h3>
-                    <p>Crónica completa del torneo que nos llevó a la victoria en atletismo y natación.</p>
-                    <div class="article-card-meta">
-                        <span>📅 Mar 20, 2025</span>
-                        <a href="#" class="article-card-link">Leer más →</a>
+                <!-- Artículo 3 -->
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/deportes1/600/400" alt="Artículo deportes"
+                        class="article-card-image" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Deportes</span>
+                        <h3>Campeonato interescolar: Nuestras estrellas brillan</h3>
+                        <p>Crónica completa del torneo que nos llevó a la victoria en atletismo y natación.</p>
+                        <div class="article-card-meta">
+                            <span>📅 Mar 20, 2025</span>
+                            <a href="#" class="article-card-link">Leer más →</a>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Artículo 4 -->
-            <article class="article-card">
-                <img src="https://picsum.photos/seed/arte1/600/400" alt="Artículo arte" class="article-card-image"
-                    loading="lazy">
-                <div class="article-card-content">
-                    <span class="article-card-category">Arte</span>
-                    <h3>Exposición de fotografía: Miradas del alma</h3>
-                    <p>La galería estudiantil presenta una colección emotiva que captura la esencia de nuestra juventud.
-                    </p>
-                    <div class="article-card-meta">
-                        <span>📅 Mar 18, 2025</span>
-                        <a href="#" class="article-card-link">Leer más →</a>
+                <!-- Artículo 4 -->
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/arte1/600/400" alt="Artículo arte" class="article-card-image"
+                        loading="lazy">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Arte</span>
+                        <h3>Exposición de fotografía: Miradas del alma</h3>
+                        <p>La galería estudiantil presenta una colección emotiva que captura la esencia de nuestra
+                            juventud.
+                        </p>
+                        <div class="article-card-meta">
+                            <span>📅 Mar 18, 2025</span>
+                            <a href="#" class="article-card-link">Leer más →</a>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Artículo 5 -->
-            <article class="article-card">
-                <img src="https://picsum.photos/seed/opinion1/600/400" alt="Artículo opinión" class="article-card-image"
-                    loading="lazy">
-                <div class="article-card-content">
-                    <span class="article-card-category">Opinión</span>
-                    <h3>¿Por qué la lectura sigue siendo relevante?</h3>
-                    <p>Una reflexión sobre el poder transformador de los libros en la era digital.</p>
-                    <div class="article-card-meta">
-                        <span>📅 Mar 15, 2025</span>
-                        <a href="#" class="article-card-link">Leer más →</a>
+                <!-- Artículo 5 -->
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/opinion1/600/400" alt="Artículo opinión"
+                        class="article-card-image" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Opinión</span>
+                        <h3>¿Por qué la lectura sigue siendo relevante?</h3>
+                        <p>Una reflexión sobre el poder transformador de los libros en la era digital.</p>
+                        <div class="article-card-meta">
+                            <span>📅 Mar 15, 2025</span>
+                            <a href="#" class="article-card-link">Leer más →</a>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- Artículo 6 -->
-            <article class="article-card">
-                <img src="https://picsum.photos/seed/tecnologia1/600/400" alt="Artículo tecnología"
-                    class="article-card-image" loading="lazy">
-                <div class="article-card-content">
-                    <span class="article-card-category">Tecnología</span>
-                    <h3>Inteligencia Artificial: ¿Aliada o enemiga?</h3>
-                    <p>Debate estudiantil sobre el impacto de la IA en la educación y el futuro laboral.</p>
-                    <div class="article-card-meta">
-                        <span>📅 Mar 12, 2025</span>
-                        <a href="#" class="article-card-link">Leer más →</a>
+                <!-- Artículo 6 -->
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/tecnologia1/600/400" alt="Artículo tecnología"
+                        class="article-card-image" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="article-card-category">Tecnología</span>
+                        <h3>Inteligencia Artificial: ¿Aliada o enemiga?</h3>
+                        <p>Debate estudiantil sobre el impacto de la IA en la educación y el futuro laboral.</p>
+                        <div class="article-card-meta">
+                            <span>📅 Mar 12, 2025</span>
+                            <a href="#" class="article-card-link">Leer más →</a>
+                        </div>
                     </div>
-                </div>
-            </article>
-        </div>
-    </section>
+                </article>
+            </div>
+        </section>
 
-    <!-- ========================================
+        <!-- ========================================
        CATEGORÍAS
        ======================================== -->
-    <section class="section" id="categorias" style="background-color: #f5f5f5;">
-        <div class="section-header">
-            <h2>Explora por Categorías</h2>
-            <p>Encuentra el contenido que más te interesa</p>
-        </div>
+        <section class="section" id="categorias" style="background-color: #f5f5f5;">
+            <div class="section-header">
+                <h2>Explora por Categorías</h2>
+                <p>Encuentra el contenido que más te interesa</p>
+            </div>
 
-        <div class="categories-grid">
-            <a href="#" class="category-card" style="background: linear-gradient(135deg, #79789C, #847C94);">
-                <span class="category-icon">🎨</span>
-                <h3>Cultura</h3>
-                <p>12 artículos</p>
-            </a>
+            <div class="categories-grid">
+                <a href="#" class="category-card" style="background: linear-gradient(135deg, #79789C, #847C94);">
+                    <span class="category-icon">🎨</span>
+                    <h3>Cultura</h3>
+                    <p>12 artículos</p>
+                </a>
 
-            <a href="#" class="category-card" style="background: linear-gradient(135deg, #07074C, #5F5F83);">
-                <span class="category-icon">🔬</span>
-                <h3>Ciencia</h3>
-                <p>8 artículos</p>
-            </a>
+                <a href="#" class="category-card" style="background: linear-gradient(135deg, #07074C, #5F5F83);">
+                    <span class="category-icon">🔬</span>
+                    <h3>Ciencia</h3>
+                    <p>8 artículos</p>
+                </a>
 
-            <a href="#" class="category-card" style="background: linear-gradient(135deg, #7C8470, #5F5F83);">
-                <span class="category-icon">⚽</span>
-                <h3>Deportes</h3>
-                <p>15 artículos</p>
-            </a>
+                <a href="#" class="category-card" style="background: linear-gradient(135deg, #7C8470, #5F5F83);">
+                    <span class="category-icon">⚽</span>
+                    <h3>Deportes</h3>
+                    <p>15 artículos</p>
+                </a>
 
-            <a href="#" class="category-card" style="background: linear-gradient(135deg, #E7E78A, #79789C);">
-                <span class="category-icon">🎭</span>
-                <h3>Arte</h3>
-                <p>10 artículos</p>
-            </a>
+                <a href="#" class="category-card" style="background: linear-gradient(135deg, #E7E78A, #79789C);">
+                    <span class="category-icon">🎭</span>
+                    <h3>Arte</h3>
+                    <p>10 artículos</p>
+                </a>
 
-            <a href="#" class="category-card" style="background: linear-gradient(135deg, #5F5F83, #07074C);">
-                <span class="category-icon">💬</span>
-                <h3>Opinión</h3>
-                <p>20 artículos</p>
-            </a>
+                <a href="#" class="category-card" style="background: linear-gradient(135deg, #5F5F83, #07074C);">
+                    <span class="category-icon">💬</span>
+                    <h3>Opinión</h3>
+                    <p>20 artículos</p>
+                </a>
 
-            <a href="#" class="category-card" style="background: linear-gradient(135deg, #847C94, #79789C);">
-                <span class="category-icon">💻</span>
-                <h3>Tecnología</h3>
-                <p>7 artículos</p>
-            </a>
-        </div>
-    </section>
+                <a href="#" class="category-card" style="background: linear-gradient(135deg, #847C94, #79789C);">
+                    <span class="category-icon">💻</span>
+                    <h3>Tecnología</h3>
+                    <p>7 artículos</p>
+                </a>
+            </div>
+        </section>
 
-    <!-- ========================================
+        <!-- ========================================
        SOBRE NOSOTROS
        ======================================== -->
-    <section class="section about-section" id="nosotros">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="https://picsum.photos/seed/equipo/800/600" alt="Equipo Voces en Papel" loading="lazy">
-            </div>
-
-            <div class="about-content">
-                <h2>Sobre Voces en Papel</h2>
-                <p>
-                    Somos una revista escolar creada por estudiantes, para estudiantes.
-                    Desde 2025, hemos sido el medio de expresión para las ideas,
-                    historias y opiniones que dan vida a nuestra comunidad educativa.
-                </p>
-                <p>
-                    Nuestro equipo está conformado por jóvenes apasionados por el
-                    periodismo, la escritura, la fotografía y el diseño. Creemos
-                    en el poder de las palabras para inspirar cambios y conectar personas.
-                </p>
-
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="2">0+</span>
-                        <span class="stat-label">Ediciones</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="20">0+</span>
-                        <span class="stat-label">Artículos</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="200">0+</span>
-                        <span class="stat-label">Lectores</span>
-                    </div>
+        <section class="section about-section" id="nosotros">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/equipo/800/600" alt="Equipo Voces en Papel" loading="lazy">
                 </div>
 
-                <div style="margin-top: 2rem;">
-                    <a href="#contacto" class="btn btn-primary" style="display: inline-block;">Únete al Equipo</a>
+                <div class="about-content">
+                    <h2>Sobre Voces en Papel</h2>
+                    <p>
+                        Somos una revista escolar creada por estudiantes, para estudiantes.
+                        Desde 2025, hemos sido el medio de expresión para las ideas,
+                        historias y opiniones que dan vida a nuestra comunidad educativa.
+                    </p>
+                    <p>
+                        Nuestro equipo está conformado por jóvenes apasionados por el
+                        periodismo, la escritura, la fotografía y el diseño. Creemos
+                        en el poder de las palabras para inspirar cambios y conectar personas.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2">0+</span>
+                            <span class="stat-label">Ediciones</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="20">0+</span>
+                            <span class="stat-label">Artículos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="200">0+</span>
+                            <span class="stat-label">Lectores</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <a href="#contacto" class="btn btn-primary" style="display: inline-block;">Únete al Equipo</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========================================
+        <!-- ========================================
        NEWSLETTER
        ======================================== -->
-    <!-- <section class="newsletter-section" id="newsletter">
+        <!-- <section class="newsletter-section" id="newsletter">
         <div class="newsletter-container">
             <h2>📬 Suscríbete al Newsletter</h2>
             <p>Recibe las últimas noticias y artículos directamente en tu correo.
@@ -315,101 +277,88 @@
         </div>
     </section> -->
 
+    </main>
+
     <!-- ========================================
-       FOOTER COMPONENT
+       FOOTER CONTAINER (se carga desde components/footer.html)
        ======================================== -->
-    <footer class="footer" id="contacto">
-        <div class="footer-container">
-            <div class="footer-brand-column">
-                <div class="footer-brand">
-                    <img src="assets/img/Logo.png" alt="Voces en Papel Logo">
-                    <span>Voces en Papel</span>
-                </div>
-                <p class="footer-description">
-                    Somos la revista escolar que da voz a los estudiantes.
-                    Aquí encontrarás historias, opiniones y creatividad
-                    que inspiran a toda nuestra comunidad educativa.
-                </p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Twitter">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="YouTube">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
+    <div id="footer-container"></div>
 
-            <div class="footer-column">
-                <h3 class="footer-title">Enlaces Rápidos</h3>
-                <ul class="footer-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#destacados">Artículos Destacados</a></li>
-                    <li><a href="#categorias">Categorías</a></li>
-                    <li><a href="#nosotros">Sobre Nosotros</a></li>
-                    <li><a href="#newsletter">Newsletter</a></li>
-                </ul>
-            </div>
+    <!-- ========================================
+       CARGA DE COMPONENTES
+       ======================================== -->
+    <script>
+        async function loadComponent(id, path) {
+            try {
+                const response = await fetch(path);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                const container = document.getElementById(id);
+                if (container) {
+                    container.innerHTML = html;
+                    return true;
+                }
+            } catch (e) {
+                console.error(`Error loading component from ${path}:`, e);
+            }
+            return false;
+        }
 
-            <div class="footer-column">
-                <h3 class="footer-title">Categorías</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Cultura</a></li>
-                    <li><a href="#">Deportes</a></li>
-                    <li><a href="#">Ciencia</a></li>
-                    <li><a href="#">Arte</a></li>
-                    <li><a href="#">Opinión</a></li>
-                </ul>
-            </div>
+        async function initApp() {
+            // Cargar componentes de forma paralela con cache-busting
+            const [navRes, footerRes] = await Promise.all([
+                fetch(`./components/navbar.html?v=${Date.now()}`),
+                fetch(`./components/footer.html?v=${Date.now()}`)
+            ]);
 
-            <div class="footer-column">
-                <h3 class="footer-title">Contacto</h3>
-                <ul class="footer-links">
-                    <li>
-                        <a href="mailto:contacto@vocesenpapel.edu">
-                            📧 contacto@vocesenpapel.edu
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+1234567890">
-                            📞 (123) 456-7890
-                        </a>
-                    </li>
-                    <li>
-                        <span>📍 Escuela Central, Aula 101</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+            console.log('Componentes solicitados...');
 
-        <div class="footer-bottom">
-            <p>&copy; 2026 Voces en Papel - Revista Escolar. Todos los derechos reservados.</p>
-            <p style="margin-top: 0.5rem;">
-                Diseñado con ❤️ por el equipo de estudiantes
-            </p>
-        </div>
-    </footer>
+            if (navRes.ok) {
+                const navHtml = await navRes.text();
+                document.getElementById('navbar-container').innerHTML = navHtml;
+                initNavbarToggle();
+            }
 
-    <!-- JavaScript Principal -->
-    <script src="assets/js/main.js"></script>
+            if (footerRes.ok) {
+                const footerHtml = await footerRes.text();
+                console.log('Footer HTML length:', footerHtml.length);
+                const footerContainer = document.getElementById('footer-container');
+                if (footerContainer) {
+                    footerContainer.innerHTML = footerHtml;
+                    console.log('Footer insertado correctamente');
+                    console.log('Footer cols:', document.querySelectorAll('.footer-col').length);
+                }
+            }
+
+            // Cargar main.js después de que los componentes estén listos
+            console.log('Cargando main.js...');
+            const script = document.createElement('script');
+            script.src = 'assets/js/main.js';
+            document.body.appendChild(script);
+        }
+
+        function initNavbarToggle() {
+            const toggle = document.getElementById('navbar-toggle');
+            const menu = document.getElementById('navbar-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    menu.classList.toggle('active');
+                    const spans = toggle.querySelectorAll('span');
+                    if (menu.classList.contains('active')) {
+                        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                        spans[1].style.opacity = '0';
+                        spans[2].style.transform = 'rotate(-45deg) translate(7px, -5px)';
+                    } else {
+                        spans.forEach(s => s.style.transform = 'none');
+                        spans[1].style.opacity = '1';
+                    }
+                });
+            }
+        }
+
+        // Iniciar carga de componentes
+        initApp();
+    </script>
 
 </body>
 

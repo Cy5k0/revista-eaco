@@ -5,7 +5,9 @@
  * ========================================
  */
 
-document.addEventListener('DOMContentLoaded', function () {
+// Función para inicializar todo cuando los componentes estén listos
+function initMain() {
+  console.log('📰 Inicializando Voces en Papel...');
 
   // ========================================
   // NAVBAR MOBILE TOGGLE
@@ -37,19 +39,21 @@ document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.querySelector('.navbar');
   let lastScroll = 0;
 
-  window.addEventListener('scroll', function () {
-    const currentScroll = window.pageYOffset;
+  if (navbar) {
+    window.addEventListener('scroll', function () {
+      const currentScroll = window.pageYOffset;
 
-    if (currentScroll > 100) {
-      navbar.style.padding = '0.5rem 2rem';
-      navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
-    } else {
-      navbar.style.padding = '1rem 2rem';
-      navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
-    }
+      if (currentScroll > 100) {
+        navbar.style.padding = '0.5rem 2rem';
+        navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+      } else {
+        navbar.style.padding = '1rem 2rem';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+      }
 
-    lastScroll = currentScroll;
-  });
+      lastScroll = currentScroll;
+    });
+  }
 
   // ========================================
   // SMOOTH SCROLL PARA LINKS INTERNOS
@@ -68,10 +72,12 @@ document.addEventListener('DOMContentLoaded', function () {
           // Cerrar menú mobile si está abierto
           if (navbarMenu && navbarMenu.classList.contains('active')) {
             navbarMenu.classList.remove('active');
-            const spans = navbarToggle.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
+            if (navbarToggle) {
+              const spans = navbarToggle.querySelectorAll('span');
+              spans[0].style.transform = 'none';
+              spans[1].style.opacity = '1';
+              spans[2].style.transform = 'none';
+            }
           }
 
           const offsetTop = target.offsetTop - 80;
@@ -295,4 +301,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   console.log('📰 Voces en Papel - Revista Escolar cargada correctamente');
-});
+}
+
+// Ejecutar cuando el DOM esté listo
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMain);
+} else {
+  initMain();
+}
