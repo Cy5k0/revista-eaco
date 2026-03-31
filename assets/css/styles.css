@@ -82,6 +82,11 @@ body {
   letter-spacing: 0 !important;
 }
 
+.footer-title-script {
+  font-family: 'Kaushan Script', cursive !important;
+  text-transform: none !important;
+}
+
 .navbar-menu {
   display: flex;
   list-style: none;
