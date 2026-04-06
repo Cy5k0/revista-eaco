@@ -405,6 +405,33 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  aspect-ratio: 680 / 515;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
 .about-image img {
   width: 100%;
   height: 400px;

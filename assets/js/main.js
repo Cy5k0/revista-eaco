@@ -265,6 +265,24 @@ function initMain() {
   }
 
   // ========================================
+  // CAROUSEL FADE AUTOMÁTICO (ABOUT SECTION)
+  // ========================================
+  const carouselSlides = document.querySelectorAll('.carousel-slide');
+
+  if (carouselSlides.length > 0) {
+    let currentSlide = 0;
+    const slideInterval = 4000; // Cambia cada 4 segundos
+
+    function nextSlide() {
+      carouselSlides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % carouselSlides.length;
+      carouselSlides[currentSlide].classList.add('active');
+    }
+
+    setInterval(nextSlide, slideInterval);
+  }
+
+  // ========================================
   // CONTADOR ANIMADO PARA ESTADÍSTICAS
   // ========================================
   const statNumbers = document.querySelectorAll('.stat-number');
