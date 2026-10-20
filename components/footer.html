@@ -1,60 +1,83 @@
-<footer class="footer" id="contacto">
+<!-- ========================================
+     COMPONENTE FOOTER REUTILIZABLE
+     Voces en Papel - Revista Escolar
+     Ubicación: /assets/components/footer/footer.html
+     ======================================== -->
+<footer class="footer" id="contacto" role="contentinfo">
+  <div class="footer-top-decoration"></div>
   <div class="footer-content">
-    <!-- Columna 1: Brand -->
-    <div class="footer-col">
+    <!-- Columna 1: Brand & Misión -->
+    <div class="footer-col footer-col-brand">
       <div class="footer-logo">
-        <img src="assets/img/Logo.png" alt="Voces en Papel Logo">
-        <h3 class="footer-title-script">VOCES EN PAPEL</h3>
+        <img src="assets/img/Logo.png" alt="Voces en Papel Logo" width="56" height="56">
+        <div>
+          <h3 class="footer-title-script">Voces en Papel</h3>
+          <span class="footer-tagline">Taller de Periodismo Escolar</span>
+        </div>
       </div>
-      <p class="footer-text">Somos la revista escolar que da voz a los estudiantes. Aquí encontrarás historias,
-        opiniones y creatividad que inspiran a toda nuestra comunidad educativa.</p>
-      <!-- <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Facebook">FB</a>
-        <a href="#" class="social-link" aria-label="Instagram">IG</a>
-        <a href="#" class="social-link" aria-label="Twitter">TW</a>
-      </div> -->
+      <p class="footer-text">
+        Espacio creativo y periodístico de la <strong>Escuela de Artes y Cultura de Osorno</strong>. 
+        Promovemos la libre expresión, la investigación, el pensamiento crítico y la creatividad 
+        de nuestros estudiantes de 5º a 8º año básico.
+      </p>
+      <div class="footer-badges">
+        <span class="footer-badge">Edición Nº 2</span>
+        <span class="footer-badge">Año Escolar 2026</span>
+        <span class="footer-badge">Osorno, Chile</span>
+      </div>
     </div>
 
-    <!-- Columna 2: Enlaces Rápidos -->
+    <!-- Columna 2: Secciones de la Revista -->
     <div class="footer-col">
-      <h4 class="footer-heading">Enlaces Rápidos</h4>
+      <h4 class="footer-heading">Secciones</h4>
       <ul class="footer-list">
-        <li><a href="#inicio" class="footer-link">Inicio</a></li>
-        <li><a href="#destacados" class="footer-link">Artículos</a></li>
-        <li><a href="#categorias" class="footer-link">Categorías</a></li>
-        <li><a href="#nosotros" class="footer-link">Nosotros</a></li>
-        <li><a href="#newsletter" class="footer-link">Newsletter</a></li>
+        <li><a href="#investigacion" class="footer-link">Reportes de Investigación</a></li>
+        <li><a href="#opinion" class="footer-link">Columnas de Opinión</a></li>
+        <li><a href="#trafkintu" class="footer-link">Reportaje Central: Trafkintu</a></li>
+        <li><a href="#quien-soy" class="footer-link">Ensayos "¿Quién Soy?"</a></li>
+        <li><a href="#galerias" class="footer-link">Galerías de Eventos Escolares</a></li>
+        <li><a href="#juegos" class="footer-link">Pasatiempos y Juegos</a></li>
+        <li><a href="#staff" class="footer-link">Equipo de Redacción</a></li>
       </ul>
     </div>
 
-    <!-- Columna 3: Categorías -->
+    <!-- Columna 3: Eventos Escolares -->
     <div class="footer-col">
-      <h4 class="footer-heading">Categorías</h4>
+      <h4 class="footer-heading">Eventos & Cultura</h4>
       <ul class="footer-list">
-        <li><a href="#" class="footer-link">Cultura</a></li>
-        <li><a href="#" class="footer-link">Deportes</a></li>
-        <li><a href="#" class="footer-link">Ciencia</a></li>
-        <li><a href="#" class="footer-link">Arte</a></li>
-        <li><a href="#" class="footer-link">Opinión</a></li>
+        <li><a href="#galerias" class="footer-link" data-gallery-filter="trafkintu">Ceremonia Mapuche Trafkintu</a></li>
+        <li><a href="#galerias" class="footer-link" data-gallery-filter="cueca">Muestra Escolar de Cueca</a></li>
+        <li><a href="#galerias" class="footer-link" data-gallery-filter="becas">Entrega de Becas TIC</a></li>
+        <li><a href="#galerias" class="footer-link" data-gallery-filter="libro">Celebración Día del Libro</a></li>
+        <li><a href="#galerias" class="footer-link" data-gallery-filter="alumno">Festejo Día del Alumno</a></li>
+        <li><a href="#galerias" class="footer-link" data-gallery-filter="plantas">Cuidado Ambiental & Plantas</a></li>
       </ul>
     </div>
 
-    <!-- Columna 4: Contacto -->
+    <!-- Columna 4: Contacto Institucional -->
     <div class="footer-col">
-      <h4 class="footer-heading">Contacto</h4>
+      <h4 class="footer-heading">Contacto & Taller</h4>
       <ul class="footer-list">
         <li class="footer-contact">
-          <span class="contact-icon">📧</span>
+          <span class="contact-icon" aria-hidden="true">👩‍🏫</span>
+          <div>
+            <strong>Profesora Encargada:</strong>
+            <span>Lucila García</span>
+          </div>
+        </li>
+        <li class="footer-contact">
+          <span class="contact-icon" aria-hidden="true">📧</span>
           <a href="mailto:lucila.garcia@daemosorno.cl" class="footer-link">lucila.garcia@daemosorno.cl</a>
         </li>
         <li class="footer-contact">
-          <span class="contact-icon">📞</span>
+          <span class="contact-icon" aria-hidden="true">📞</span>
           <a href="tel:+56642233179" class="footer-link">+56 64 223 3179</a>
         </li>
         <li class="footer-contact">
-          <span class="contact-icon">📍</span>
-          <span><a href="https://www.escueladeartesycultura.com" target="_blank" rel="noopener noreferrer"
-              class="footer-link-highlight">Escuela Artes y Cultura Osorno</a></span>
+          <span class="contact-icon" aria-hidden="true">🏫</span>
+          <a href="https://www.escueladeartesycultura.com" target="_blank" rel="noopener noreferrer" class="footer-link-highlight">
+            Escuela Artes y Cultura Osorno
+          </a>
         </li>
       </ul>
     </div>
@@ -63,11 +86,11 @@
   <!-- Footer Bottom -->
   <div class="footer-bottom">
     <div class="footer-bottom-content">
-      <p>&copy; 2026 Voces en Papel. Todos los derechos reservados.</p>
-      <p class="footer-credit"> Diseñado por <a href="https://github.com/Cy5k0" target="_blank"
-          rel="noopener noreferrer" class="footer-link-highlight">Francisco Colomer B.</a> | <a
-          href="https://www.escueladeartesycultura.com" target="_blank" rel="noopener noreferrer"
-          class="footer-link-highlight">www.escueladeartesycultura.com</a></p>
+      <p>&copy; 2026 <strong>Voces en Papel</strong> — Escuela de Artes y Cultura de Osorno. Todos los derechos reservados.</p>
+      <p class="footer-credit">
+        Diseñado con dedicación por <a href="https://github.com/Cy5k0" target="_blank" rel="noopener noreferrer" class="footer-link-highlight">Francisco Colomer B.</a> | 
+        <a href="https://www.escueladeartesycultura.com" target="_blank" rel="noopener noreferrer" class="footer-link-highlight">escueladeartesycultura.com</a>
+      </p>
     </div>
   </div>
 </footer>
