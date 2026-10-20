@@ -5,366 +5,520 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Voces en Papel - Revista escolar que da voz a los estudiantes. Encuentra historias, opiniones y creatividad.">
-    <meta name="author" content="Voces en Papel">
+        content="Voces en Papel - Revista escolar de la Escuela de Artes y Cultura de Osorno. Edición #2 con reportes de investigación, opinión, ceremonia de Trafkintu, pasatiempos y galerías fotográficas.">
+    <meta name="author" content="Taller de Periodismo Escolar - Escuela de Artes y Cultura">
+    <meta name="keywords" content="revista escolar, voces en papel, osorno, escuela de artes y cultura, trafkintu, periodismo escolar, educaplay">
 
-    <title>Voces en Papel | Revista Escolar</title>
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Voces en Papel | Revista Escolar EACO">
+    <meta property="og:description" content="Historias, investigaciones y creatividad de los estudiantes de la Escuela de Artes y Cultura de Osorno.">
+    <meta property="og:image" content="assets/img/Logo.png">
 
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/img/Logo.png">
+    <title>Voces en Papel | Revista Escolar — Escuela de Artes y Cultura de Osorno</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Kaushan+Script&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Kaushan+Script&display=swap"
         rel="stylesheet">
 
-    <style>
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Playfair Display', serif;
-        }
+    <!-- Estilos CSS Modulares -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/Logo.png">
 
-        .navbar-title {
-            font-family: 'Kaushan Script', cursive !important;
-        }
-    </style>
+    <!-- Scripts de Datos y Lógica (Diferidos) -->
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
 
     <!-- ========================================
-       NAVBAR COMPONENT CONTAINER
+       NAVBAR (Componente reutilizable)
        ======================================== -->
-    <div id="navbar-container"></div>
+    <div id="navbar-container">
+        <!-- Fallback pre-renderizado para ejecución local sin servidor -->
+        <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+            <div class="navbar-container">
+                <a href="#inicio" class="navbar-logo">
+                    <img src="assets/img/Logo.png" alt="Logotipo Voces en Papel" width="46" height="46">
+                    <div class="navbar-brand-text">
+                        <span class="navbar-title">Voces en Papel</span>
+                        <span class="navbar-subtitle">Revista Escolar EACO</span>
+                    </div>
+                </a>
+                <ul class="navbar-menu" id="navbar-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#investigacion" class="nav-link">Investigación</a></li>
+                    <li><a href="#opinion" class="nav-link">Opinión</a></li>
+                    <li><a href="#trafkintu" class="nav-link">Trafkintu</a></li>
+                    <li><a href="#quien-soy" class="nav-link">¿Quién Soy?</a></li>
+                    <li><a href="#galerias" class="nav-link">Galerías</a></li>
+                    <li><a href="#juegos" class="nav-link">Juegos</a></li>
+                    <li><a href="#staff" class="nav-link">Redacción</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                </ul>
+                <div class="navbar-actions">
+                    <a href="#investigacion" class="btn-navbar">Edición #2</a>
+                    <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menú de navegación">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-    <main>
+    <main id="main-content">
+
         <!-- ========================================
-           HERO SECTION
+           HERO SECTION: PORTADA EDITORIAL
            ======================================== -->
         <section class="hero" id="inicio">
-            <div class="hero-content">
-                <span class="hero-badge">📰 Edición #2 - Marzo 2026</span>
-                <h1>Voces en Papel</h1>
-                <p>La revista escolar que conecta historias, ideas y creatividad.
-                    Descubre las voces que dan vida a nuestra comunidad educativa.</p>
-                <div class="hero-cta">
-                    <a href="#destacados" class="btn btn-primary">Leer Artículos</a>
-                    <a href="#nosotros" class="btn btn-secondary">Conócenos</a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ========================================
-       ARTÍCULOS DESTACADOS
-       ======================================== -->
-        <section class="section" id="destacados">
-            <div class="section-header">
-                <h2>Artículos Destacados</h2>
-                <p>Las mejores historias escritas por nuestros estudiantes</p>
-            </div>
-
-            <div class="featured-grid">
-                <!-- Artículo 1 -->
-                <article class="article-card">
-                    <img src="https://picsum.photos/seed/cultura1/600/400" alt="Artículo cultura"
-                        class="article-card-image" loading="lazy">
-                    <div class="article-card-content">
-                        <span class="article-card-category">Cultura</span>
-                        <h3>El renacimiento del arte urbano en nuestra ciudad</h3>
-                        <p>Exploramos cómo los jóvenes artistas están transformando los espacios públicos con murales
-                            que
-                            cuentan historias.</p>
-                        <div class="article-card-meta">
-                            <span>📅 Mar 25, 2025</span>
-                            <a href="#" class="article-card-link">Leer más →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Artículo 2 -->
-                <article class="article-card">
-                    <img src="https://picsum.photos/seed/ciencia1/600/400" alt="Artículo ciencia"
-                        class="article-card-image" loading="lazy">
-                    <div class="article-card-content">
-                        <span class="article-card-category">Ciencia</span>
-                        <h3>Proyecto estudiantil: Energía solar para el futuro</h3>
-                        <p>Nuestros estudiantes de física desarrollan un prototipo innovador de paneles solares de bajo
-                            costo.</p>
-                        <div class="article-card-meta">
-                            <span>📅 Mar 22, 2025</span>
-                            <a href="#" class="article-card-link">Leer más →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Artículo 3 -->
-                <article class="article-card">
-                    <img src="https://picsum.photos/seed/deportes1/600/400" alt="Artículo deportes"
-                        class="article-card-image" loading="lazy">
-                    <div class="article-card-content">
-                        <span class="article-card-category">Deportes</span>
-                        <h3>Campeonato interescolar: Nuestras estrellas brillan</h3>
-                        <p>Crónica completa del torneo que nos llevó a la victoria en atletismo y natación.</p>
-                        <div class="article-card-meta">
-                            <span>📅 Mar 20, 2025</span>
-                            <a href="#" class="article-card-link">Leer más →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Artículo 4 -->
-                <article class="article-card">
-                    <img src="https://picsum.photos/seed/arte1/600/400" alt="Artículo arte" class="article-card-image"
-                        loading="lazy">
-                    <div class="article-card-content">
-                        <span class="article-card-category">Arte</span>
-                        <h3>Exposición de fotografía: Miradas del alma</h3>
-                        <p>La galería estudiantil presenta una colección emotiva que captura la esencia de nuestra
-                            juventud.
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <span class="hero-badge">
+                            <span>📰</span> Edición Oficial Nº 2 • Escuela de Artes y Cultura
+                        </span>
+                        <h1>
+                            Voces en Papel
+                            <span>El pulso creativo de nuestra escuela</span>
+                        </h1>
+                        <p>
+                            Revista digital elaborada por los estudiantes del taller de periodismo escolar.
+                            Explora investigaciones sobre ciencia, tecnología, medio ambiente, columnas de opinión, 
+                            la sabiduría ancestral del <em>Trafkintu</em>, pasatiempos interactivos y galerías de nuestra comunidad.
                         </p>
-                        <div class="article-card-meta">
-                            <span>📅 Mar 18, 2025</span>
-                            <a href="#" class="article-card-link">Leer más →</a>
+                        <div class="hero-actions">
+                            <a href="#investigacion" class="btn btn-primary">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                                <span>Leer Artículos</span>
+                            </a>
+                            <a href="#trafkintu" class="btn btn-secondary">
+                                <span>🌱 Reportaje Central: Trafkintu</span>
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="hero-stat-item">
+                                <span class="hero-stat-number">33</span>
+                                <span class="hero-stat-label">Periodistas Escolares</span>
+                            </div>
+                            <div class="hero-stat-item">
+                                <span class="hero-stat-number">20+</span>
+                                <span class="hero-stat-label">Artículos y Ensayos</span>
+                            </div>
+                            <div class="hero-stat-item">
+                                <span class="hero-stat-number">6</span>
+                                <span class="hero-stat-label">Galerías Fotográficas</span>
+                            </div>
                         </div>
                     </div>
-                </article>
 
-                <!-- Artículo 5 -->
-                <article class="article-card">
-                    <img src="https://picsum.photos/seed/opinion1/600/400" alt="Artículo opinión"
-                        class="article-card-image" loading="lazy">
-                    <div class="article-card-content">
-                        <span class="article-card-category">Opinión</span>
-                        <h3>¿Por qué la lectura sigue siendo relevante?</h3>
-                        <p>Una reflexión sobre el poder transformador de los libros en la era digital.</p>
-                        <div class="article-card-meta">
-                            <span>📅 Mar 15, 2025</span>
-                            <a href="#" class="article-card-link">Leer más →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Artículo 6 -->
-                <article class="article-card">
-                    <img src="https://picsum.photos/seed/tecnologia1/600/400" alt="Artículo tecnología"
-                        class="article-card-image" loading="lazy">
-                    <div class="article-card-content">
-                        <span class="article-card-category">Tecnología</span>
-                        <h3>Inteligencia Artificial: ¿Aliada o enemiga?</h3>
-                        <p>Debate estudiantil sobre el impacto de la IA en la educación y el futuro laboral.</p>
-                        <div class="article-card-meta">
-                            <span>📅 Mar 12, 2025</span>
-                            <a href="#" class="article-card-link">Leer más →</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- ========================================
-       CATEGORÍAS
-       ======================================== -->
-        <section class="section" id="categorias" style="background-color: #f5f5f5;">
-            <div class="section-header">
-                <h2>Explora por Categorías</h2>
-                <p>Encuentra el contenido que más te interesa</p>
-            </div>
-
-            <div class="categories-grid">
-                <a href="#" class="category-card" style="background: linear-gradient(135deg, #79789C, #847C94);">
-                    <span class="category-icon">🎨</span>
-                    <h3>Cultura</h3>
-                    <p>12 artículos</p>
-                </a>
-
-                <a href="#" class="category-card" style="background: linear-gradient(135deg, #07074C, #5F5F83);">
-                    <span class="category-icon">🔬</span>
-                    <h3>Ciencia</h3>
-                    <p>8 artículos</p>
-                </a>
-
-                <a href="#" class="category-card" style="background: linear-gradient(135deg, #7C8470, #5F5F83);">
-                    <span class="category-icon">⚽</span>
-                    <h3>Deportes</h3>
-                    <p>15 artículos</p>
-                </a>
-
-                <a href="#" class="category-card" style="background: linear-gradient(135deg, #E7E78A, #79789C);">
-                    <span class="category-icon">🎭</span>
-                    <h3>Arte</h3>
-                    <p>10 artículos</p>
-                </a>
-
-                <a href="#" class="category-card" style="background: linear-gradient(135deg, #5F5F83, #07074C);">
-                    <span class="category-icon">💬</span>
-                    <h3>Opinión</h3>
-                    <p>20 artículos</p>
-                </a>
-
-                <a href="#" class="category-card" style="background: linear-gradient(135deg, #847C94, #79789C);">
-                    <span class="category-icon">💻</span>
-                    <h3>Tecnología</h3>
-                    <p>7 artículos</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- ========================================
-       SOBRE NOSOTROS
-       ======================================== -->
-        <section class="section about-section" id="nosotros">
-            <div class="about-container">
-                <div class="about-image carousel-container">
-                    <div class="carousel-slide active" style="background-image: url('assets/img/team-revista.webp');">
-                    </div>
-                    <div class="carousel-slide" style="background-image: url('assets/img/team02-revista.webp');"></div>
+                    <!-- Tarjeta Destacada de Portada -->
+                    <aside class="hero-feature-card">
+                        <span class="hero-feature-badge">Tradición Ancestral EACO</span>
+                        <img src="assets/img/galerias/trafkintu/IMG_0747.webp" alt="Ceremonia de Trafkintu" class="hero-feature-img" loading="lazy">
+                        <h3 class="hero-feature-title">Trafkintu: El valor del intercambio comunitario</h3>
+                        <p class="hero-feature-desc">
+                            Nuestra escuela rescató el rito mapuche del trueque de semillas, plantas y saberes ancestrales. 
+                            Conoce la crónica completa y la galería fotográfica de la jornada.
+                        </p>
+                        <a href="#trafkintu" class="btn btn-primary" style="width: 100%;">Ver Reportaje Especial →</a>
+                    </aside>
                 </div>
+            </div>
+        </section>
 
-                <div class="about-content">
-                    <h2>Sobre Voces en Papel</h2>
-                    <p>
-                        Somos una revista escolar creada y dirigida por la profesora Lucila García,
-                        donde los estudiantes de la Escuela de Artes y Cultura expresan su creatividad
-                        a través de la escritura, el periodismo y el arte.
-                    </p>
-                    <p>
-                        Este taller está destinado a alumnos de 5º a 8º básico, quienes desarrollan
-                        habilidades de comunicación, investigación y trabajo en equipo mientras
-                        crean contenido que refleja sus intereses, inquietudes y visión del mundo.
-                    </p>
+        <!-- ========================================
+           REPORTES DE INVESTIGACIÓN ESTUDIANTIL
+           ======================================== -->
+        <section class="section" id="investigacion">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Periodismo Estudiantil</span>
+                    <h2>Reportes de Investigación</h2>
+                    <p>Artículos desarrollados por los alumnos de 5º a 8º año básico sobre ciencia, tecnología, medio ambiente e historia.</p>
+                </header>
 
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="2">0+</span>
-                            <span class="stat-label">Ediciones</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="20">0+</span>
-                            <span class="stat-label">Artículos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="200">0+</span>
-                            <span class="stat-label">Lectores</span>
-                        </div>
-                    </div>
+                <!-- Grid dinámico renderizado con data.js -->
+                <div class="articles-grid" id="grid-investigacion">
+                    <!-- Se carga dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
 
-                    <div style="margin-top: 2rem;">
-                        <a href="#contacto" class="btn btn-primary" style="display: inline-block;">Únete al Equipo</a>
+        <!-- ========================================
+           TRIBUNA ESTUDIANTIL: COLUMNAS DE OPINIÓN
+           ======================================== -->
+        <section class="section section-alt" id="opinion">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Pensamiento Crítico</span>
+                    <h2>Columnas de Opinión</h2>
+                    <p>El gran debate escolar: perspectivas de nuestros estudiantes sobre el uso del teléfono celular en las salas de clase y los recreos.</p>
+                </header>
+
+                <div class="opinion-container" id="grid-opiniones">
+                    <!-- Se carga dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+           REPORTAJE CENTRAL: TRAFKINTU MAPUCHE
+           ======================================== -->
+        <section class="section" id="trafkintu">
+            <div class="container">
+                <div class="trafkintu-hero">
+                    <div class="trafkintu-hero-grid">
+                        <div class="trafkintu-info">
+                            <span class="trafkintu-tag">Cultura Ancestral Mapuche</span>
+                            <h2 class="trafkintu-title">¿Qué es el Trafkintu?</h2>
+                            <p class="trafkintu-lead">
+                                El <strong>Trafkintu</strong> (o <em>Trafkintun</em>) es una ceremonia y práctica ancestral 
+                                del pueblo Mapuche centrada en el intercambio mutuo de semillas, plantas, alimentos, animales, 
+                                bienes y conocimientos. La palabra proviene del mapudungun <em>traf</em> (juntarse, reunirse) 
+                                y <em>kintun</em> (buscar): <strong>"un encuentro para buscar el intercambio"</strong>.
+                            </p>
+                            <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.6;">
+                                A diferencia de una transacción comercial o un simple trueque material, el Trafkintu es un acto 
+                                comunitario con un profundo sentido social, espiritual y ecológico, vivido con emoción por toda la 
+                                comunidad de la Escuela de Artes y Cultura de Osorno.
+                            </p>
+
+                            <div class="trafkintu-pillars">
+                                <div class="pillar-card">
+                                    <h4>🌱 Soberanía y Semillas</h4>
+                                    <p>Mecanismo para resguardar, multiplicar y hacer circular semillas nativas y criollas locales.</p>
+                                </div>
+                                <div class="pillar-card">
+                                    <h4>🤝 Kelluwün (Reciprocidad)</h4>
+                                    <p>Fortalece las alianzas entre familias y lof, fomentando el apoyo mutuo y el respeto fraterno.</p>
+                                </div>
+                                <div class="pillar-card">
+                                    <h4>🗣️ Nütram (Saberes)</h4>
+                                    <p>Al intercambiar una planta se comparte su historia, cultivo, propiedades y consejos de crianza.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trafkintu-showcase">
+                            <img src="assets/img/galerias/trafkintu/IMG_0750.webp" alt="Ceremonia Trafkintu en EACO" loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ========================================
-       NEWSLETTER
-       ======================================== -->
-        <!-- <section class="newsletter-section" id="newsletter">
-        <div class="newsletter-container">
-            <h2>📬 Suscríbete al Newsletter</h2>
-            <p>Recibe las últimas noticias y artículos directamente en tu correo.
-                ¡No te pierdas ninguna historia!</p>
+           ¿QUIÉN SOY? — IDENTIDAD Y ENSAYOS
+           ======================================== -->
+        <section class="section section-alt" id="quien-soy">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Identidad y Letras</span>
+                    <h2>¿Quién Soy?</h2>
+                    <p>Ensayos autobiográficos donde los redactores reflexionan sobre sus pasiones, sueños, historia personal y vocación.</p>
+                </header>
 
-            <form class="newsletter-form" id="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo electrónico">
-                <button type="submit">Suscribirme</button>
-            </form>
-        </div>
-    </section> -->
+                <div class="quien-grid" id="grid-quien-soy">
+                    <!-- Se carga dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+           GALERÍAS FOTOGRÁFICAS DE LA VIDA ESCOLAR
+           ======================================== -->
+        <section class="section" id="galerias">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Registro Gráfico</span>
+                    <h2>Galerías de Nuestra Comunidad</h2>
+                    <p>Revive en imágenes los hitos y celebraciones más significativas de la Escuela de Artes y Cultura de Osorno. Haz clic en cualquier fotografía para ampliarla.</p>
+                </header>
+
+                <!-- Barra de Filtros -->
+                <nav class="gallery-filter-bar" aria-label="Filtrar galerías por evento">
+                    <button class="filter-btn active" data-category="all">Todas las Fotos</button>
+                    <button class="filter-btn" data-category="trafkintu">🌱 Trafkintu</button>
+                    <button class="filter-btn" data-category="cueca">💃 Muestra de Cueca</button>
+                    <button class="filter-btn" data-category="becas">💻 Becas TIC</button>
+                    <button class="filter-btn" data-category="libro">📚 Día del Libro</button>
+                    <button class="filter-btn" data-category="alumno">🎉 Día del Alumno</button>
+                    <button class="filter-btn" data-category="plantas">🌿 Entrega de Plantas</button>
+                    <button class="filter-btn" data-category="humor">🎨 Humor y Creatividad</button>
+                    <button class="filter-btn" data-category="familia">❤️ Mi Familia</button>
+                </nav>
+
+                <!-- Grid de Fotos -->
+                <div class="gallery-grid" id="grid-galerias">
+                    <!-- Se carga dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+           ZONA DE PASATIEMPOS Y JUEGOS EDUCAPLAY
+           ======================================== -->
+        <section class="section section-alt" id="juegos">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Zona Interactiva</span>
+                    <h2>Pasatiempos y Juegos Escolares</h2>
+                    <p>Pon a prueba tu agilidad mental con los juegos interactivos diseñados en Educaplay por nuestros talleres escolares.</p>
+                </header>
+
+                <div class="games-container">
+                    <div class="games-tabs">
+                        <button class="game-tab-btn active" data-game="futbol">
+                            ⚽ Sopa de Letras: Fútbol Chileno
+                        </button>
+                        <button class="game-tab-btn" data-game="tecnologia">
+                            🦖 Crucigrama: Dinosaurios y Tecnología
+                        </button>
+                    </div>
+
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <h3 id="game-title" style="color: var(--color-primary); font-size: 1.4rem;">⚽ Sopa de Letras: Fútbol Chileno</h3>
+                        <p id="game-desc" style="color: var(--text-muted); font-size: 0.95rem;">Encuentra los clubes y figuras del fútbol chileno en este entretenido pasatiempo escolar.</p>
+                    </div>
+
+                    <div class="game-frame-wrapper">
+                        <iframe id="game-iframe"
+                            src="https://es.educaplay.com/juego/29440650-futbol_chileno.html"
+                            title="Juego Interactivo Educaplay"
+                            allow="fullscreen; autoplay; allow-top-navigation-by-user-activation"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+           PROYECTOS DE TECNOLOGÍA & CREATIVIDAD
+           ======================================== -->
+        <section class="section" id="tecnologia-creatividad">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Innovación & Expresión</span>
+                    <h2>Tecnología y Expresión Estudiantil</h2>
+                    <p>Conoce los proyectos de tecnología de los estudiantes y sus creaciones gráficas de humor y familia.</p>
+                </header>
+
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-card-header">
+                            <span class="article-badge badge-tecnologia">Tecnología</span>
+                            <span class="article-course-tag">Educación Tecnológica</span>
+                        </div>
+                        <div class="article-card-body">
+                            <h3 class="article-card-title">Proyectos de Innovación Tecnológica Escolar 01</h3>
+                            <p class="article-card-excerpt">
+                                Propuestas prácticas de diseño de objetos, sostenibilidad y uso eficiente de materiales desarrolladas en el laboratorio escolar.
+                            </p>
+                            <div class="article-card-footer">
+                                <span class="author-name">Alumnos de Tecnología</span>
+                                <a href="https://drive.google.com/file/d/1mlJsNjkkSWbfrWJ31PvF8bwI86kYaTdY/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                                    <span>Ver Proyecto PDF</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-card-header">
+                            <span class="article-badge badge-tecnologia">Tecnología</span>
+                            <span class="article-course-tag">Educación Tecnológica</span>
+                        </div>
+                        <div class="article-card-body">
+                            <h3 class="article-card-title">Proyectos de Innovación Tecnológica Escolar 02</h3>
+                            <p class="article-card-excerpt">
+                                Modelos experimentales y soluciones cotidianas con enfoque en el bienestar de la comunidad escolar y el medio ambiente.
+                            </p>
+                            <div class="article-card-footer">
+                                <span class="author-name">Alumnos de Tecnología</span>
+                                <a href="https://drive.google.com/file/d/1W_Y6Kw7W_mxxL2zjJffvyX8cXdnYV-jz/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                                    <span>Ver Proyecto PDF</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-card-header">
+                            <span class="article-badge badge-historia">Humor y Familia</span>
+                            <span class="article-course-tag">Taller Creativo</span>
+                        </div>
+                        <div class="article-card-body">
+                            <h3 class="article-card-title">Tiras Cómicas y Relatos Familiares</h3>
+                            <p class="article-card-excerpt">
+                                Chistes de animales, reflexiones motivadoras e historietas sobre la convivencia en el hogar y en la escuela.
+                            </p>
+                            <div class="article-card-footer">
+                                <span class="author-name">Redacción Escolar</span>
+                                <a href="#galerias" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.85rem;" onclick="document.querySelector('.filter-btn[data-category=\'humor\']').click();">
+                                    <span>Ver Galería</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+           EQUIPO EDITORIAL / STAFF DE REDACCIÓN
+           ======================================== -->
+        <section class="section section-alt" id="staff">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Nuestras Firmas</span>
+                    <h2>Equipo de Redacción y Periodistas</h2>
+                    <p>Conoce a los 33 estudiantes que hacen posible esta edición de <em>Voces en Papel</em>. Escribe un nombre para buscar a un reportero.</p>
+                </header>
+
+                <!-- Buscador de Redactores -->
+                <div class="staff-search-wrapper">
+                    <span class="staff-search-icon" aria-hidden="true">🔎</span>
+                    <input type="text" id="staff-search" class="staff-search-input" placeholder="Buscar por nombre de redactor..." aria-label="Buscar reportero del staff">
+                </div>
+
+                <!-- Grid de Redactores -->
+                <div class="staff-grid" id="grid-staff">
+                    <!-- Se carga dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+           SOBRE NOSOTROS / TALLER DE PERIODISMO
+           ======================================== -->
+        <section class="section" id="nosotros">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-carousel">
+                        <div class="carousel-slide active" style="background-image: url('assets/img/team-revista.webp');" title="Equipo de Periodismo Escolar"></div>
+                        <div class="carousel-slide" style="background-image: url('assets/img/team02-revista.webp');" title="Alumnos en el Taller de Periodismo"></div>
+                    </div>
+
+                    <div class="about-info">
+                        <span class="section-tag">Nuestra Identidad</span>
+                        <h2>Sobre Voces en Papel</h2>
+                        <p>
+                            <strong>Voces en Papel</strong> es una revista escolar nacida en el corazón de la 
+                            <strong>Escuela de Artes y Cultura de Osorno</strong>, guiada y coordinada por la profesora 
+                            <strong>Lucila García</strong>.
+                        </p>
+                        <p>
+                            Este taller reúne a estudiantes de 5º a 8º año básico para explorar el periodismo, 
+                            la fotografía, el debate respetuoso y la literatura. Aquí aprenden a investigar con rigor, 
+                            a entrevistar a su comunidad y a compartir con orgullo sus puntos de vista.
+                        </p>
+
+                        <div class="about-stats">
+                            <div class="stat-box">
+                                <span class="stat-number" data-count="2">0+</span>
+                                <span class="stat-label">Ediciones Publicadas</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-count="33">0+</span>
+                                <span class="stat-label">Periodistas Escolares</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-count="300">0+</span>
+                                <span class="stat-label">Lectores en Osorno</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <a href="#contacto" class="btn btn-primary">Contacto Institucional</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <!-- ========================================
-       FOOTER CONTAINER (se carga desde components/footer.html)
+       MODAL LIGHTBOX PARA FOTOGRAFÍAS
        ======================================== -->
-    <div id="footer-container"></div>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotografía ampliada">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar visor">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Imagen anterior">&#8249;</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Imagen siguiente">&#8250;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img" class="lightbox-img">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
 
     <!-- ========================================
-       CARGA DE COMPONENTES
+       FOOTER CONTAINER (Componente reutilizable)
        ======================================== -->
-    <script>
-        async function loadComponent(id, path) {
-            try {
-                const response = await fetch(path);
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                const html = await response.text();
-                const container = document.getElementById(id);
-                if (container) {
-                    container.innerHTML = html;
-                    return true;
-                }
-            } catch (e) {
-                console.error(`Error loading component from ${path}:`, e);
-            }
-            return false;
-        }
-
-        async function initApp() {
-            // Cargar componentes de forma paralela con cache-busting
-            const [navRes, footerRes] = await Promise.all([
-                fetch(`./components/navbar.html?v=${Date.now()}`),
-                fetch(`./components/footer.html?v=${Date.now()}`)
-            ]);
-
-            console.log('Componentes solicitados...');
-
-            if (navRes.ok) {
-                const navHtml = await navRes.text();
-                document.getElementById('navbar-container').innerHTML = navHtml;
-                initNavbarToggle();
-            }
-
-            if (footerRes.ok) {
-                const footerHtml = await footerRes.text();
-                console.log('Footer HTML length:', footerHtml.length);
-                const footerContainer = document.getElementById('footer-container');
-                if (footerContainer) {
-                    footerContainer.innerHTML = footerHtml;
-                    console.log('Footer insertado correctamente');
-                    console.log('Footer cols:', document.querySelectorAll('.footer-col').length);
-                }
-            }
-
-            // Cargar main.js después de que los componentes estén listos
-            console.log('Cargando main.js...');
-            const script = document.createElement('script');
-            script.src = 'assets/js/main.js';
-            document.body.appendChild(script);
-        }
-
-        function initNavbarToggle() {
-            const toggle = document.getElementById('navbar-toggle');
-            const menu = document.getElementById('navbar-menu');
-            if (toggle && menu) {
-                toggle.addEventListener('click', () => {
-                    menu.classList.toggle('active');
-                    const spans = toggle.querySelectorAll('span');
-                    if (menu.classList.contains('active')) {
-                        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                        spans[1].style.opacity = '0';
-                        spans[2].style.transform = 'rotate(-45deg) translate(7px, -5px)';
-                    } else {
-                        spans.forEach(s => s.style.transform = 'none');
-                        spans[1].style.opacity = '1';
-                    }
-                });
-            }
-        }
-
-        // Iniciar carga de componentes
-        initApp();
-    </script>
+    <div id="footer-container">
+        <!-- Fallback pre-renderizado para ejecución local sin servidor -->
+        <footer class="footer" id="contacto" role="contentinfo">
+            <div class="footer-top-decoration"></div>
+            <div class="footer-content">
+                <div class="footer-col footer-col-brand">
+                    <div class="footer-logo">
+                        <img src="assets/img/Logo.png" alt="Voces en Papel Logo" width="56" height="56">
+                        <div>
+                            <h3 class="footer-title-script">Voces en Papel</h3>
+                            <span class="footer-tagline">Taller de Periodismo Escolar</span>
+                        </div>
+                    </div>
+                    <p class="footer-text">
+                        Espacio de la <strong>Escuela de Artes y Cultura de Osorno</strong> que da voz a los estudiantes, 
+                        estimulando la indagación y la creatividad de 5º a 8º básico.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Secciones</h4>
+                    <ul class="footer-list">
+                        <li><a href="#investigacion" class="footer-link">Investigación</a></li>
+                        <li><a href="#opinion" class="footer-link">Opinión</a></li>
+                        <li><a href="#trafkintu" class="footer-link">Trafkintu</a></li>
+                        <li><a href="#quien-soy" class="footer-link">¿Quién Soy?</a></li>
+                        <li><a href="#galerias" class="footer-link">Galerías</a></li>
+                        <li><a href="#juegos" class="footer-link">Juegos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contacto</h4>
+                    <ul class="footer-list">
+                        <li class="footer-contact">
+                            <span>👩‍🏫 Profesora Encargada: Lucila García</span>
+                        </li>
+                        <li class="footer-contact">
+                            <span>📧 <a href="mailto:lucila.garcia@daemosorno.cl" class="footer-link">lucila.garcia@daemosorno.cl</a></span>
+                        </li>
+                        <li class="footer-contact">
+                            <span>📍 <a href="https://www.escueladeartesycultura.com" target="_blank" rel="noopener noreferrer" class="footer-link-highlight">Escuela Artes y Cultura Osorno</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 Voces en Papel — Escuela de Artes y Cultura de Osorno.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
 
 </body>
 

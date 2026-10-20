@@ -1,108 +1,89 @@
-# Voces en Papel - Revista Escolar
+# 📰 Voces en Papel — Revista Escolar EACO
+### Escuela de Artes y Cultura de Osorno • Edición #2 (2026)
 
-Sitio web para la revista escolar "Voces en Papel", desarrollado con HTML, CSS y JavaScript.
+Sitio web oficial de la revista escolar **"Voces en Papel"**, desarrollada con arquitectura web moderna, modular y accesible (HTML5 semántico, CSS3 modular y JavaScript ES6+).
+
+---
 
 ## 📁 Estructura del Proyecto
 
-```
+El proyecto sigue una arquitectura organizada y escalable conforme a los estándares de desarrollo web:
+
+```text
 revista02/
-├── index.html              # Página principal
 ├── assets/
-│   ├── img/                # Imágenes (Logo.png)
+│   ├── components/
+│   │   ├── navbar/
+│   │   │   └── navbar.html         # Componente Navbar reutilizable
+│   │   └── footer/
+│   │       └── footer.html         # Componente Footer reutilizable
 │   ├── css/
-│   │   └── styles.css      # Estilos personalizados
-│   └── js/
-│       └── main.js         # Funcionalidades JavaScript
-└── components/
-    ├── navbar.html         # Componente de navegación
-    └── footer.html         # Componente de pie de página
+│   │   ├── global.css              # Tokens, variables, reset y estructura base
+│   │   ├── components.css          # Estilos de tarjetas, hero, galerías y modal
+│   │   ├── utilities.css           # Animaciones, responsive utilities y botón scroll
+│   │   └── styles.css              # Importador central de hojas de estilo
+│   ├── js/
+│   │   ├── data.js                 # Dataset estructurado (artículos, PDFs, galerías, staff)
+│   │   └── main.js                 # Lógica interactiva, filtros, lightbox y componentes
+│   ├── img/
+│   │   ├── staff/                  # 33 fotografías oficiales de los redactores escolares
+│   │   ├── galerias/               # Registro fotográfico de hitos escolares
+│   │   │   ├── trafkintu/          # Ceremonia ancestral mapuche (19 fotos)
+│   │   │   ├── muestra_cueca/      # Muestra folclórica de cueca (12 fotos)
+│   │   │   ├── becas_tic/          # Entrega oficial de computadores (10 fotos)
+│   │   │   ├── dia_libro/          # Trabajos y afiches Día del Libro (4 fotos)
+│   │   │   ├── dia_alumno/         # Celebración Día del Alumno (4 fotos)
+│   │   │   └── entrega_plantas/    # Jornada ecológica y comunitaria (15 fotos)
+│   │   ├── secciones/
+│   │   │   ├── humor/              # Tira cómica "Chistes de Animales"
+│   │   │   └── mi_familia/         # Infografías y afiches "Mi Familia"
+│   │   ├── Logo.png                # Emblema oficial de la revista
+│   │   ├── team-revista.webp       # Fotografía del taller de periodismo
+│   │   └── team02-revista.webp     # Fotografía de trabajo en equipo
+│   ├── fonts/                      # Fuentes locales y recursos tipográficos
+│   └── icons/                      # Iconos vectoriales y favicons
+├── pages/                          # Páginas secundarias y futuras ediciones
+├── layouts/                        # Plantillas de diseño
+├── utils/                          # Scripts y utilidades complementarias
+├── components/                     # Espejo de compatibilidad para componentes
+├── agregar/                        # Carpeta fuente de insumos, enlaces y material original
+├── CNAME                           # Dominio personalizado de publicación
+└── index.html                      # Portada y revista digital completa
 ```
+
+---
+
+## 🎨 Contenido y Secciones de la Edición #2
+
+1. **Portada & Hero:** Presentación editorial con contadores dinámicos y llamada a la lectura.
+2. **Reportes de Investigación:** 9 investigaciones estudiantiles (Cambio climático, cohetes y física, inteligencia artificial, redes sociales en menores, desigualdad social, pirámides de Egipto, importancia de las abejas e inventos mundiales) con enlaces directos al PDF oficial en Google Drive.
+3. **Tribuna Estudiantil (Opinión):** Debate escolar sobre el uso del teléfono celular en salas de clase y recreos por alumnos de 5º y 6º básico.
+4. **Reportaje Central: Trafkintu Ancestral:** Crónica histórica del rito mapuche de intercambio de semillas, plantas y saberes (*kelluwün*, *nütram*, *llellipun*) vivido en la comunidad escolar.
+5. **¿Quién Soy?:** Ensayos autobiográficos de los redactores con enlaces a sus textos en PDF.
+6. **Galerías Fotográficas Escolares:** Visor interactivo con filtros por categoría (Trafkintu, Cueca, Becas TIC, Día del Libro, Día del Alumno, Entrega de Plantas, Humor y Familia) con **Modal Lightbox** a pantalla completa y navegación con teclado.
+7. **Zona Interactiva de Pasatiempos (Educaplay):** Sopa de letras de fútbol chileno y Crucigrama interactivo de tecnología y dinosaurios integrados de forma responsiva.
+8. **Proyectos de Tecnología & Humor:** Trabajos de innovación escolar y tiras cómicas.
+9. **Equipo de Redacción (Staff):** Directorio interactivo de los 33 redactores y periodistas escolares con barra de búsqueda en tiempo real.
+10. **Sobre Nosotros:** Información del taller guiado por la profesora Lucila García en la Escuela de Artes y Cultura de Osorno.
+
+---
 
 ## 🚀 Cómo Ejecutar el Proyecto
 
-### Opción 1: Abrir directamente (Recomendado)
-Simplemente abre el archivo `index.html` en tu navegador.
-
-### Opción 2: Usar un servidor local (Para desarrollo)
-Para una mejor experiencia de desarrollo, usa un servidor local:
-
-**VS Code - Live Server:**
-1. Instala la extensión "Live Server"
-2. Haz clic derecho en `index.html`
-3. Selecciona "Open with Live Server"
-
-**Python:**
+### Opción 1: Servidor Local (Recomendado)
+Para una experiencia completa con carga modular:
 ```bash
 # Python 3
 python -m http.server 8000
 
-# Python 2
-python -m SimpleHTTPServer 8000
-```
-
-**Node.js:**
-```bash
+# Node.js
 npx http-server -p 8000
 ```
+Luego abre `http://localhost:8000` en tu navegador.
 
-## 🎨 Paleta de Colores
-
-| Color | Código Hex |
-|-------|------------|
-| Amarillo | `#E7E78A` |
-| Azul Oscuro | `#07074C` |
-| Gris Azulado | `#5F5F83` |
-| Lavanda | `#79789C` |
-| Verde Gris | `#7C8470` |
-| Morado Gris | `#847C94` |
-
-## 🧩 Componentes
-
-Los componentes `navbar` y `footer` están ubicados en la carpeta `components/` como referencia. 
-Actualmente están **incluidos directamente en `index.html`** para que el sitio funcione sin servidor local.
-
-### Para usar carga dinámica de componentes:
-
-Si deseas cargar los componentes dinámicamente desde la carpeta `components/`:
-
-1. **JavaScript:** Agrega la función `loadComponents()` en `main.js`
-2. **HTML:** Reemplaza el navbar y footer con:
-   ```html
-   <nav class="navbar" data-component="components/navbar.html"></nav>
-   <footer class="footer" data-component="components/footer.html"></footer>
-   ```
-3. **Importante:** Debes usar un servidor local (las políticas CORS bloquean fetch en archivos locales)
-
-## ✨ Características
-
-- ✅ Diseño responsive (móvil, tablet, desktop)
-- ✅ Navbar sticky con efecto scroll
-- ✅ Menú móvil hamburguesa
-- ✅ Smooth scroll para navegación interna
-- ✅ Animaciones al hacer scroll
-- ✅ Formulario de newsletter con validación
-- ✅ Botón "volver arriba"
-- ✅ Contador animado para estadísticas
-- ✅ Efecto parallax suave en hero
-- ✅ Imágenes placeholder (Picsum)
-
-## 📝 Secciones del Sitio
-
-1. **Inicio/Hero** - Portada con badge de edición y CTAs
-2. **Artículos Destacados** - Grid de 6 artículos
-3. **Categorías** - 6 categorías con iconos
-4. **Sobre Nosotros** - Información + estadísticas
-5. **Newsletter** - Formulario de suscripción
-6. **Footer** - Enlaces, contacto y redes sociales
-
-## 🛠️ Tecnologías
-
-- HTML5
-- CSS3 (con Tailwind CSS vía CDN)
-- JavaScript (ES6+)
-- Google Fonts (Playfair Display + Inter)
-- Picsum (imágenes placeholder)
+### Opción 2: Apertura Directa
+El archivo `index.html` incluye resiliencia y fallback pre-renderizado para que funcione tanto abriéndolo directamente en el navegador como a través de GitHub Pages.
 
 ---
 
-**Desarrollado con ❤️ para la revista escolar "Voces en Papel"**
+**Escuela de Artes y Cultura de Osorno** — *Voces en Papel: conectando historias, ideas y creatividad.*

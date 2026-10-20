@@ -1,0 +1,219 @@
+/* ==========================================================================
+   VOCES EN PAPEL - REVISTA ESCOLAR (ESCUELA DE ARTES Y CULTURA DE OSORNO)
+   global.css: Variables de diseño, reset, tipografías y estructura base
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variables de Diseño y Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Paleta institucional y editorial */
+  --color-primary: #07074C;          /* Azul Profundo Editorial */
+  --color-primary-light: #151566;    /* Azul Suave */
+  --color-primary-dark: #030328;     /* Azul Medianoche */
+  --color-accent: #E7E78A;           /* Amarillo Dorado Emblema */
+  --color-accent-hover: #f5f59e;     /* Amarillo Luminoso */
+  --color-accent-dark: #b8b84d;      /* Dorado Intenso */
+
+  /* Colores secundarios de armonía */
+  --color-lavanda: #79789C;          /* Lavanda Suave */
+  --color-morado-gris: #847C94;      /* Púrpura Editorial */
+  --color-verde-gris: #7C8470;       /* Verde Tierra / Naturaleza */
+  --color-gris-azulado: #5F5F83;     /* Gris Azulado */
+
+  /* Superficies y Fondos */
+  --bg-page: #f8f9fd;
+  --bg-card: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-dark: #07074C;
+  --bg-dark-card: #0f0f5c;
+
+  /* Texto y Contraste */
+  --text-primary: #0a0c27;
+  --text-secondary: #4a4e69;
+  --text-muted: #72768e;
+  --text-inverse: #ffffff;
+  --text-accent: #07074c;
+
+  /* Bordes y Sombras */
+  --border-light: rgba(7, 7, 76, 0.08);
+  --border-medium: rgba(7, 7, 76, 0.16);
+  --border-accent: rgba(231, 231, 138, 0.35);
+
+  --shadow-sm: 0 2px 8px rgba(7, 7, 76, 0.06);
+  --shadow-md: 0 8px 24px rgba(7, 7, 76, 0.09);
+  --shadow-lg: 0 16px 40px rgba(7, 7, 76, 0.14);
+  --shadow-xl: 0 24px 60px rgba(7, 7, 76, 0.22);
+  --shadow-glow: 0 0 25px rgba(231, 231, 138, 0.3);
+
+  /* Radios de curvatura */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Tipografías */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-script: 'Kaushan Script', cursive;
+
+  /* Transiciones */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Reset y Normalización Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Jerarquía Tipográfica Semántica
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* --------------------------------------------------------------------------
+   Contenedores y Layout General
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.section-alt {
+  background-color: #f0f2fa;
+}
+
+.section-dark {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: var(--text-inverse);
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: #ffffff;
+}
+
+.section-dark p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-tag {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background-color: rgba(231, 231, 138, 0.25);
+  color: var(--color-primary);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.section-dark .section-tag {
+  background-color: rgba(231, 231, 138, 0.15);
+  color: var(--color-accent);
+  border-color: rgba(231, 231, 138, 0.3);
+}
+
+.section-header p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+}
