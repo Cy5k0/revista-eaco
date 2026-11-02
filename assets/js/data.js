@@ -144,9 +144,9 @@ const REVISTA_DATA = {
     { nombre: "Ian Hidalgo Olavarría", curso: "Taller Periodismo", avatar: "assets/img/staff/Ian Hidalgo.webp", urlPdf: "https://drive.google.com/file/d/1vm8L8qCK4h0wo7KZEMT5UqZFINzMEN59/view?usp=sharing" },
     { nombre: "Joaquín Oyarzún", curso: "Taller Periodismo", avatar: "assets/img/staff/Joaquín Oyarzún.webp", urlPdf: "https://drive.google.com/file/d/1tiY40DjMjIzWwo7YqpAGQIo_6VJG1lOn/view?usp=sharing" },
     { nombre: "Leonela Matheus", curso: "Taller Periodismo", avatar: "assets/img/staff/Leonela Matheus.webp", urlPdf: "https://drive.google.com/file/d/1VwnqFl46anxGf8Xzj1d8eakoZnU7v_s4/view?usp=sharing" },
-    { nombre: "Matías Altamirano", curso: "Taller Periodismo", avatar: "assets/img/staff/Matías Altamirano.webp", urlPdf: "https://drive.google.com/file/d/19iSqWgJZ_kVOmcHW42AfA4nIDerKce_W/view?usp=sharing" },
-    { nombre: "Matías Pérez", curso: "Taller Periodismo", avatar: "assets/img/staff/Matías Pérez_.webp", urlPdf: "https://drive.google.com/file/d/1XNWZ_6G6uEKtOH3_jNJICg7H1FdMxRae/view?usp=sharing" },
-    { nombre: "Nelson Mihelic", curso: "Taller Periodismo", avatar: "assets/img/staff/Lucas Maldonado.webp", urlPdf: "https://drive.google.com/file/d/1Od08LbgBDH4aBXwebb10MDisXQEx7_nU/view?usp=sharing" }
+    { nombre: "Matías Altamirano", curso: "Taller Periodismo", avatar: "assets/img/staff/Matías Altamirano.webp", urlPdf: "https://drive.google.com/file/d/1dIrYdJikKRsCCRuR0deiVseSk68OPhNl/view?usp=sharing" },
+    { nombre: "Matías Pérez", curso: "Taller Periodismo", avatar: "assets/img/staff/Matías Pérez_.webp", urlPdf: "https://drive.google.com/file/d/1BwKmxVTwlhK9045gqOMoA-zZiyy6E1EE/view?usp=sharing" },
+    { nombre: "Nelson Mihelic", curso: "Taller Periodismo", avatar: "assets/img/staff/Lucas Maldonado.webp", urlPdf: "https://drive.google.com/file/d/1FryeE4omMhTFX9PM9SM2jhkfn7XP5Jou/view?usp=sharing" }
   ],
 
   proyectosTecnologia: [
