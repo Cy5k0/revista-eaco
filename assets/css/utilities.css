@@ -168,6 +168,10 @@
     gap: 1.25rem;
   }
 
+  .about-carousel {
+    height: 280px;
+  }
+
   .hero-actions {
     flex-direction: column;
   }
@@ -178,6 +182,10 @@
 
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .dia-libro-media {
+    height: 210px;
   }
 
   .staff-grid {

@@ -60,6 +60,7 @@
                     <li><a href="#opinion" class="nav-link">Opinión</a></li>
                     <li><a href="#trafkintu" class="nav-link">Trafkintu</a></li>
                     <li><a href="#quien-soy" class="nav-link">¿Quién Soy?</a></li>
+                    <li><a href="#dia-del-libro" class="nav-link">Día del Libro</a></li>
                     <li><a href="#galerias" class="nav-link">Galerías</a></li>
                     <li><a href="#juegos" class="nav-link">Juegos</a></li>
                     <li><a href="#staff" class="nav-link">Redacción</a></li>
@@ -123,17 +124,11 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta Destacada de Portada -->
-                    <aside class="hero-feature-card">
-                        <span class="hero-feature-badge">Tradición Ancestral EACO</span>
-                        <img src="assets/img/galerias/trafkintu/IMG_0747.webp" alt="Ceremonia de Trafkintu" class="hero-feature-img" loading="lazy">
-                        <h3 class="hero-feature-title">Trafkintu: El valor del intercambio comunitario</h3>
-                        <p class="hero-feature-desc">
-                            Nuestra escuela rescató el rito mapuche del trueque de semillas, plantas y saberes ancestrales. 
-                            Conoce la crónica completa y la galería fotográfica de la jornada.
-                        </p>
-                        <a href="#trafkintu" class="btn btn-primary" style="width: 100%;">Ver Reportaje Especial →</a>
-                    </aside>
+                    <!-- Carrusel de Fotografías del Equipo Escolar -->
+                    <div class="about-carousel" id="nosotros" aria-label="Fotografías del equipo de periodismo escolar">
+                        <div class="carousel-slide active" style="background-image: url('assets/img/team-revista.webp');" title="Equipo de Periodismo Escolar"></div>
+                        <div class="carousel-slide" style="background-image: url('assets/img/team02-revista.webp');" title="Alumnos en el Taller de Periodismo"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -237,9 +232,26 @@
         </section>
 
         <!-- ========================================
+           DÍA DEL LIBRO: HOMENAJE A LAS LETRAS
+           ======================================== -->
+        <section class="section" id="dia-del-libro">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Fomento Lector & Letras</span>
+                    <h2>Celebración del Día del Libro</h2>
+                    <p>Afiches, infografías y piezas gráficas diseñadas por los estudiantes del taller para conmemorar el valor de los libros, la lectura y la creatividad en nuestra escuela.</p>
+                </header>
+
+                <div class="dia-libro-grid" id="grid-dia-libro">
+                    <!-- Se carga dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
            GALERÍAS FOTOGRÁFICAS DE LA VIDA ESCOLAR
            ======================================== -->
-        <section class="section" id="galerias">
+        <section class="section section-alt" id="galerias">
             <div class="container">
                 <header class="section-header">
                     <span class="section-tag">Registro Gráfico</span>
@@ -253,7 +265,6 @@
                     <button class="filter-btn" data-category="trafkintu">🌱 Trafkintu</button>
                     <button class="filter-btn" data-category="cueca">💃 Muestra de Cueca</button>
                     <button class="filter-btn" data-category="becas">💻 Becas TIC</button>
-                    <button class="filter-btn" data-category="libro">📚 Día del Libro</button>
                     <button class="filter-btn" data-category="alumno">🎉 Día del Alumno</button>
                     <button class="filter-btn" data-category="plantas">🌿 Entrega de Plantas</button>
                     <button class="filter-btn" data-category="humor">🎨 Humor y Creatividad</button>
@@ -402,53 +413,6 @@
             </div>
         </section>
 
-        <!-- ========================================
-           SOBRE NOSOTROS / TALLER DE PERIODISMO
-           ======================================== -->
-        <section class="section" id="nosotros">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-carousel">
-                        <div class="carousel-slide active" style="background-image: url('assets/img/team-revista.webp');" title="Equipo de Periodismo Escolar"></div>
-                        <div class="carousel-slide" style="background-image: url('assets/img/team02-revista.webp');" title="Alumnos en el Taller de Periodismo"></div>
-                    </div>
-
-                    <div class="about-info">
-                        <span class="section-tag">Nuestra Identidad</span>
-                        <h2>Sobre Voces en Papel</h2>
-                        <p>
-                            <strong>Voces en Papel</strong> es una revista escolar nacida en el corazón de la 
-                            <strong>Escuela de Artes y Cultura de Osorno</strong>, guiada y coordinada por la profesora 
-                            <strong>Lucila García</strong>.
-                        </p>
-                        <p>
-                            Este taller reúne a estudiantes de 5º a 8º año básico para explorar el periodismo, 
-                            la fotografía, el debate respetuoso y la literatura. Aquí aprenden a investigar con rigor, 
-                            a entrevistar a su comunidad y a compartir con orgullo sus puntos de vista.
-                        </p>
-
-                        <div class="about-stats">
-                            <div class="stat-box">
-                                <span class="stat-number" data-count="2">0+</span>
-                                <span class="stat-label">Ediciones Publicadas</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-number" data-count="33">0+</span>
-                                <span class="stat-label">Periodistas Escolares</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-number" data-count="300">0+</span>
-                                <span class="stat-label">Lectores en Osorno</span>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 2rem;">
-                            <a href="#contacto" class="btn btn-primary">Contacto Institucional</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
     </main>
 
@@ -493,6 +457,7 @@
                         <li><a href="#opinion" class="footer-link">Opinión</a></li>
                         <li><a href="#trafkintu" class="footer-link">Trafkintu</a></li>
                         <li><a href="#quien-soy" class="footer-link">¿Quién Soy?</a></li>
+                        <li><a href="#dia-del-libro" class="footer-link">Día del Libro</a></li>
                         <li><a href="#galerias" class="footer-link">Galerías</a></li>
                         <li><a href="#juegos" class="footer-link">Juegos</a></li>
                     </ul>

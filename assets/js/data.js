@@ -149,6 +149,37 @@ const REVISTA_DATA = {
     { nombre: "Nelson Mihelic", curso: "Taller Periodismo", avatar: "assets/img/staff/Lucas Maldonado.webp", urlPdf: "https://drive.google.com/file/d/1FryeE4omMhTFX9PM9SM2jhkfn7XP5Jou/view?usp=sharing" }
   ],
 
+  diaLibro: [
+    {
+      id: "libro-1",
+      titulo: "Sobre el Día del Libro y la Lectura",
+      categoria: "Infografía Literaria",
+      descripcion: "Reflexión gráfica sobre el valor de la lectura, el nacimiento de historias inolvidables y el poder de los libros en la imaginación escolar.",
+      src: "assets/img/galerias/dia_libro/Sobre el dia del libro.webp"
+    },
+    {
+      id: "libro-2",
+      titulo: "Edición Especial Número 1",
+      categoria: "Publicación Conmemorativa",
+      descripcion: "Pieza editorial diseñada por los estudiantes del taller para celebrar el día del libro y las grandes obras de la literatura universal.",
+      src: "assets/img/galerias/dia_libro/Número 1.webp"
+    },
+    {
+      id: "libro-3",
+      titulo: "¡Celebrando el Día del Libro!",
+      categoria: "Afiche Promocional",
+      descripcion: "Afiche de difusión escolar invitando a la comunidad educativa de la EACO a compartir lecturas, poemas y momentos en torno a los libros.",
+      src: "assets/img/galerias/dia_libro/Dia del librooo.webp"
+    },
+    {
+      id: "libro-4",
+      titulo: "Felicidades en el Día del Libro",
+      categoria: "Tarjeta Conmemorativa",
+      descripcion: "Tarjeta de homenaje fraternal dedicada a profesores, jóvenes lectores, autores y familias que dan vida a las letras en nuestra escuela.",
+      src: "assets/img/galerias/dia_libro/feliz dia del libro.webp"
+    }
+  ],
+
   proyectosTecnologia: [
     {
       titulo: "Proyecto de Innovación Tecnológica Escolar 01",
@@ -223,12 +254,6 @@ const REVISTA_DATA = {
     { cat: "becas", catLabel: "Becas TIC", titulo: "Estudiantes Reciben sus Laptops", src: "assets/img/galerias/becas_tic/IMG_1018.webp" },
     { cat: "becas", catLabel: "Becas TIC", titulo: "Alegría y Nuevas Oportunidades", src: "assets/img/galerias/becas_tic/IMG_1041.webp" },
     { cat: "becas", catLabel: "Becas TIC", titulo: "Jornada Oficial de Entrega", src: "assets/img/galerias/becas_tic/IMG_1049.webp" },
-
-    // Día del Libro
-    { cat: "libro", catLabel: "Día del Libro", titulo: "Sobre el Día del Libro y la Lectura", src: "assets/img/galerias/dia_libro/Sobre el dia del libro.webp" },
-    { cat: "libro", catLabel: "Día del Libro", titulo: "Edición Especial Número 1", src: "assets/img/galerias/dia_libro/Número 1.webp" },
-    { cat: "libro", catLabel: "Día del Libro", titulo: "¡Celebrando el Día del Libro!", src: "assets/img/galerias/dia_libro/Dia del librooo.webp" },
-    { cat: "libro", catLabel: "Día del Libro", titulo: "Felicidades en el Día del Libro", src: "assets/img/galerias/dia_libro/feliz dia del libro.webp" },
 
     // Día del Alumno
     { cat: "alumno", catLabel: "Día del Alumno", titulo: "Celebración y Alegría en la Escuela", src: "assets/img/galerias/dia_alumno/IMG_0342.webp" },

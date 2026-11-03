@@ -21,6 +21,7 @@ async function initApp() {
     renderInvestigacion(REVISTA_DATA.reportesInvestigacion);
     renderOpiniones(REVISTA_DATA.opiniones);
     renderQuienSoy(REVISTA_DATA.quienSoy);
+    renderDiaLibro(REVISTA_DATA.diaLibro);
     renderStaff(REVISTA_DATA.staff);
     renderGalerias(REVISTA_DATA.galerias, 'all');
   }
@@ -198,6 +199,55 @@ function renderQuienSoy(items) {
       </a>
     </div>
   `).join('');
+}
+
+/**
+ * Renderizado de Sección Día del Libro
+ */
+let currentDiaLibroList = [];
+
+function renderDiaLibro(items) {
+  const container = document.getElementById('grid-dia-libro');
+  if (!container || !items) return;
+
+  currentDiaLibroList = items;
+
+  container.innerHTML = items.map((item, index) => `
+    <article class="dia-libro-card" data-index="${index}" tabindex="0" role="button" aria-label="Ampliar obra: ${item.titulo}">
+      <div class="dia-libro-media">
+        <img src="${encodeURI(item.src)}" alt="${item.titulo}" loading="lazy">
+        <div class="dia-libro-badge">${item.categoria}</div>
+        <div class="dia-libro-zoom" aria-hidden="true">🔍 Ampliar</div>
+      </div>
+      <div class="dia-libro-content">
+        <h3 class="dia-libro-title">${item.titulo}</h3>
+        <p class="dia-libro-desc">${item.descripcion}</p>
+        <button type="button" class="btn-libro-view" tabindex="-1" aria-hidden="true">
+          <span>Ver afiche en grande</span>
+        </button>
+      </div>
+    </article>
+  `).join('');
+
+  container.querySelectorAll('.dia-libro-card').forEach(card => {
+    const trigger = () => {
+      const idx = parseInt(card.getAttribute('data-index'), 10);
+      currentGalleryList = currentDiaLibroList.map(it => ({
+        src: it.src,
+        titulo: it.titulo,
+        catLabel: it.categoria
+      }));
+      openLightbox(idx);
+    };
+
+    card.addEventListener('click', trigger);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        trigger();
+      }
+    });
+  });
 }
 
 /**

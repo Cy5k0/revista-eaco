@@ -59,12 +59,12 @@ revista02/
 2. **Reportes de Investigación:** 9 investigaciones estudiantiles (Cambio climático, cohetes y física, inteligencia artificial, redes sociales en menores, desigualdad social, pirámides de Egipto, importancia de las abejas e inventos mundiales) con enlaces directos al PDF oficial en Google Drive.
 3. **Tribuna Estudiantil (Opinión):** Debate escolar sobre el uso del teléfono celular en salas de clase y recreos por alumnos de 5º y 6º básico.
 4. **Reportaje Central: Trafkintu Ancestral:** Crónica histórica del rito mapuche de intercambio de semillas, plantas y saberes (*kelluwün*, *nütram*, *llellipun*) vivido en la comunidad escolar.
-5. **¿Quién Soy?:** Ensayos autobiográficos de los redactores con enlaces a sus textos en PDF.
-6. **Galerías Fotográficas Escolares:** Visor interactivo con filtros por categoría (Trafkintu, Cueca, Becas TIC, Día del Libro, Día del Alumno, Entrega de Plantas, Humor y Familia) con **Modal Lightbox** a pantalla completa y navegación con teclado.
-7. **Zona Interactiva de Pasatiempos (Educaplay):** Sopa de letras de fútbol chileno y Crucigrama interactivo de tecnología y dinosaurios integrados de forma responsiva.
-8. **Proyectos de Tecnología & Humor:** Trabajos de innovación escolar y tiras cómicas.
-9. **Equipo de Redacción (Staff):** Directorio interactivo de los 33 redactores y periodistas escolares con barra de búsqueda en tiempo real.
-10. **Sobre Nosotros:** Información del taller guiado por la profesora Lucila García en la Escuela de Artes y Cultura de Osorno.
+5. **¿Quién Soy?:** Ensayos autobiográficos de los redactores con enlaces a sus textos en PDF y PNG.
+6. **Día del Libro:** Sección conmemorativa con afiches, infografías y piezas gráficas diseñadas por los estudiantes con visor ampliado.
+7. **Galerías Fotográficas Escolares:** Visor interactivo con filtros por categoría (Trafkintu, Cueca, Becas TIC, Día del Alumno, Entrega de Plantas, Humor y Familia) con **Modal Lightbox** a pantalla completa y navegación con teclado.
+8. **Zona Interactiva de Pasatiempos (Educaplay):** Sopa de letras de fútbol chileno y Crucigrama interactivo de tecnología y dinosaurios integrados de forma responsiva.
+9. **Proyectos de Tecnología & Humor:** Trabajos de innovación escolar y tiras cómicas.
+10. **Equipo de Redacción (Staff):** Directorio interactivo de los 33 redactores y periodistas escolares con barra de búsqueda en tiempo real.
 
 ---
 
