@@ -26,7 +26,7 @@ revista02/
 │   │   ├── data.js                 # Dataset estructurado (artículos, PDFs, galerías, staff)
 │   │   └── main.js                 # Lógica interactiva, filtros, lightbox y componentes
 │   ├── img/
-│   │   ├── staff/                  # 33 fotografías oficiales de los redactores escolares
+│   │   ├── staff/                  # 34 fotografías oficiales de los redactores escolares
 │   │   ├── galerias/               # Registro fotográfico de hitos escolares
 │   │   │   ├── trafkintu/          # Ceremonia ancestral mapuche (19 fotos)
 │   │   │   ├── muestra_cueca/      # Muestra folclórica de cueca (12 fotos)
@@ -64,7 +64,7 @@ revista02/
 7. **Galerías Fotográficas Escolares:** Visor interactivo con filtros por categoría (Trafkintu, Cueca, Becas TIC, Día del Alumno, Entrega de Plantas, Humor y Familia) con **Modal Lightbox** a pantalla completa y navegación con teclado.
 8. **Zona Interactiva de Pasatiempos (Educaplay):** Sopa de letras de fútbol chileno y Crucigrama interactivo de tecnología y dinosaurios integrados de forma responsiva.
 9. **Proyectos de Tecnología & Humor:** Trabajos de innovación escolar y tiras cómicas.
-10. **Equipo de Redacción (Staff):** Directorio interactivo de los 33 redactores y periodistas escolares con barra de búsqueda en tiempo real.
+10. **Equipo de Redacción (Staff):** Directorio interactivo de los 34 redactores y periodistas escolares con barra de búsqueda en tiempo real.
 
 ---
 

@@ -146,7 +146,7 @@ const REVISTA_DATA = {
     { nombre: "Leonela Matheus", curso: "Taller Periodismo", avatar: "assets/img/staff/Leonela Matheus.webp", urlPdf: "https://drive.google.com/file/d/1VwnqFl46anxGf8Xzj1d8eakoZnU7v_s4/view?usp=sharing" },
     { nombre: "Matías Altamirano", curso: "Taller Periodismo", avatar: "assets/img/staff/Matías Altamirano.webp", urlPdf: "https://drive.google.com/file/d/1dIrYdJikKRsCCRuR0deiVseSk68OPhNl/view?usp=sharing" },
     { nombre: "Matías Pérez", curso: "Taller Periodismo", avatar: "assets/img/staff/Matías Pérez_.webp", urlPdf: "https://drive.google.com/file/d/1BwKmxVTwlhK9045gqOMoA-zZiyy6E1EE/view?usp=sharing" },
-    { nombre: "Nelson Mihelic", curso: "Taller Periodismo", avatar: "assets/img/staff/Lucas Maldonado.webp", urlPdf: "https://drive.google.com/file/d/1FryeE4omMhTFX9PM9SM2jhkfn7XP5Jou/view?usp=sharing" }
+    { nombre: "Nelson Mihelic", curso: "Taller Periodismo", avatar: "assets/img/staff/Nelson Mihelic.webp", urlPdf: "https://drive.google.com/file/d/1FryeE4omMhTFX9PM9SM2jhkfn7XP5Jou/view?usp=sharing" }
   ],
 
   diaLibro: [
@@ -223,6 +223,7 @@ const REVISTA_DATA = {
     { nombre: "Maximiliano González", rol: "Biodiversidad y Ecología", foto: "assets/img/staff/Maximiliano González.webp" },
     { nombre: "Moisés González", rol: "Redactor Escolar", foto: "assets/img/staff/Moises González.webp" },
     { nombre: "Nahuel Lemuy", rol: "Cultura y Tradiciones", foto: "assets/img/staff/nahuel lemuy.webp" },
+    { nombre: "Nelson Mihelic", rol: "Redactor Estudiantil", foto: "assets/img/staff/Nelson Mihelic.webp" },
     { nombre: "Nicolás Catalán", rol: "Investigación Social", foto: "assets/img/staff/Nicolás Catalán.webp" },
     { nombre: "Rubén Peña", rol: "Periodismo y Comunidad", foto: "assets/img/staff/Rubén Peña.webp" },
     { nombre: "Smiljan Martinovic", rol: "Redactor Estudiantil", foto: "assets/img/staff/Smiljan Martinovic.webp" },
