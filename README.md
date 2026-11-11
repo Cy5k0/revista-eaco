@@ -1,7 +1,7 @@
 # 📰 Voces en Papel — Revista Escolar EACO
 ### Escuela de Artes y Cultura de Osorno • Edición #2 (2026)
 
-Sitio web oficial de la revista escolar **"Voces en Papel"**, desarrollada con arquitectura web moderna, modular y accesible (HTML5 semántico, CSS3 modular y JavaScript ES6+).
+Sitio web oficial de la revista escolar **"Voces en Papel"**, desarrollada con arquitectura web moderna, modular y accesible (HTML5 semántico, CSS3 modular y JavaScript ES6+). La identidad visual usa **PaperCSS** (CDN) para lograr un aspecto de periódico escolar infantil dibujado a mano.
 
 ---
 
@@ -18,10 +18,11 @@ revista02/
 │   │   └── footer/
 │   │       └── footer.html         # Componente Footer reutilizable
 │   ├── css/
-│   │   ├── global.css              # Tokens, variables, reset y estructura base
+│   │   ├── global.css              # Tokens, reset, tipografía y estructura base
 │   │   ├── components.css          # Estilos de tarjetas, hero, galerías y modal
 │   │   ├── utilities.css           # Animaciones, responsive utilities y botón scroll
-│   │   └── styles.css              # Importador central de hojas de estilo
+│   │   ├── paper-theme.css         # Tema "periódico escolar" sobre PaperCSS
+│   │   └── styles.css              # Importador central opcional de hojas de estilo
 │   ├── js/
 │   │   ├── data.js                 # Dataset estructurado (artículos, PDFs, galerías, staff)
 │   │   └── main.js                 # Lógica interactiva, filtros, lightbox y componentes
@@ -50,6 +51,12 @@ revista02/
 ├── CNAME                           # Dominio personalizado de publicación
 └── index.html                      # Portada y revista digital completa
 ```
+
+### Dependencias externas
+
+- **PaperCSS 1.9.2** vía CDN (`unpkg.com`): aporta los bordes dibujados a mano, botones, tarjetas y campos de formulario.
+- **Google Fonts:** Patrick Hand SC (títulos), Nunito (texto) y Kaushan Script (logotipo).
+- No hay `package.json`, bundler ni proceso de compilación. Para una copia totalmente offline, descarga `paper.min.css` y sírvelo localmente.
 
 ---
 

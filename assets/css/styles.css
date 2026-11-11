@@ -1,8 +1,14 @@
 /* ==========================================================================
    VOCES EN PAPEL - REVISTA ESCOLAR (ESCUELA DE ARTES Y CULTURA DE OSORNO)
-   styles.css: Archivo principal que integra la arquitectura CSS modular
+   styles.css: Importador opcional de la arquitectura CSS modular
+
+   NOTA: el sitio carga PaperCSS desde CDN y las hojas locales directamente
+   en index.html. Si usas este archivo como única entrada, recuerda incluir
+   PaperCSS antes:
+   <link rel="stylesheet" href="https://unpkg.com/papercss@1.9.2/dist/paper.min.css">
    ========================================================================== */
 
 @import url('global.css');
 @import url('components.css');
 @import url('utilities.css');
+@import url('paper-theme.css');

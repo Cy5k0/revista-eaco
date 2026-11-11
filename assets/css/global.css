@@ -7,54 +7,69 @@
    Variables de Diseño y Tokens
    -------------------------------------------------------------------------- */
 :root {
-  /* Paleta institucional y editorial */
-  --color-primary: #07074C;          /* Azul Profundo Editorial */
-  --color-primary-light: #151566;    /* Azul Suave */
-  --color-primary-dark: #030328;     /* Azul Medianoche */
-  --color-accent: #E7E78A;           /* Amarillo Dorado Emblema */
-  --color-accent-hover: #f5f59e;     /* Amarillo Luminoso */
-  --color-accent-dark: #b8b84d;      /* Dorado Intenso */
+  /* Paleta institucional y editorial (periódico escolar) */
+  --color-primary: #2f3542;          /* Tinta principal */
+  --color-primary-light: #4a5160;    /* Tinta suave */
+  --color-primary-dark: #1f2430;     /* Tinta profunda */
+  --color-accent: #f2b705;           /* Amarillo crayón */
+  --color-accent-hover: #ffc72c;     /* Amarillo luminoso */
+  --color-accent-dark: #c99500;      /* Amarillo intenso */
 
   /* Colores secundarios de armonía */
-  --color-lavanda: #79789C;          /* Lavanda Suave */
-  --color-morado-gris: #847C94;      /* Púrpura Editorial */
-  --color-verde-gris: #7C8470;       /* Verde Tierra / Naturaleza */
-  --color-gris-azulado: #5F5F83;     /* Gris Azulado */
+  --color-lavanda: #7b5ea7;          /* Violeta crayón */
+  --color-morado-gris: #8d7aa8;      /* Violeta suave */
+  --color-verde-gris: #4f9d69;       /* Verde hoja */
+  --color-gris-azulado: #5b7c99;     /* Azul grisáceo */
 
   /* Superficies y Fondos */
-  --bg-page: #f8f9fd;
-  --bg-card: #ffffff;
-  --bg-surface-elevated: #ffffff;
-  --bg-dark: #07074C;
-  --bg-dark-card: #0f0f5c;
+  --bg-page: #fffdf4;
+  --bg-card: #fffdf4;
+  --bg-surface-elevated: #fffdf4;
+  --bg-dark: #14351f;
+  --bg-dark-card: #1b4529;
+
+  /* Papel y decoración */
+  --paper: #fffdf4;
+  --paper-alt: #f7f0dc;
+  --paper-line: #e4dcc4;
+  --ink: #2f3542;
+  --ink-soft: #555b68;
+  --crayon-blue: #235fca;
+  --crayon-red: #c7441f;
+  --crayon-green: #4f9d69;
+  --crayon-purple: #7b5ea7;
+  --crayon-yellow: #f2b705;
+  --tape: rgba(242, 183, 5, 0.5);
 
   /* Texto y Contraste */
-  --text-primary: #0a0c27;
-  --text-secondary: #4a4e69;
-  --text-muted: #72768e;
-  --text-inverse: #ffffff;
-  --text-accent: #07074c;
+  --text-primary: #2f3542;
+  --text-secondary: #555b68;
+  --text-muted: #6c7280;
+  --text-inverse: #fffdf4;
+  --text-accent: #2f3542;
 
   /* Bordes y Sombras */
-  --border-light: rgba(7, 7, 76, 0.08);
-  --border-medium: rgba(7, 7, 76, 0.16);
-  --border-accent: rgba(231, 231, 138, 0.35);
+  --border-light: rgba(47, 53, 66, 0.12);
+  --border-medium: rgba(47, 53, 66, 0.22);
+  --border-accent: rgba(242, 183, 5, 0.45);
 
-  --shadow-sm: 0 2px 8px rgba(7, 7, 76, 0.06);
-  --shadow-md: 0 8px 24px rgba(7, 7, 76, 0.09);
-  --shadow-lg: 0 16px 40px rgba(7, 7, 76, 0.14);
-  --shadow-xl: 0 24px 60px rgba(7, 7, 76, 0.22);
-  --shadow-glow: 0 0 25px rgba(231, 231, 138, 0.3);
+  --shadow-sm: 0 2px 6px rgba(47, 53, 66, 0.08);
+  --shadow-md: 0 6px 14px rgba(47, 53, 66, 0.10);
+  --shadow-lg: 0 12px 24px rgba(47, 53, 66, 0.12);
+  --shadow-xl: 15px 28px 25px -18px rgba(47, 53, 66, 0.28);
+  --shadow-glow: 0 0 0 4px rgba(242, 183, 5, 0.28);
 
   /* Radios de curvatura */
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-full: 9999px;
+  --radius-paper: 15px 255px 15px 225px / 225px 15px 255px 15px;
+  --radius-paper-sm: 8px 120px 10px 115px / 115px 10px 120px 8px;
 
   /* Tipografías */
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Patrick Hand SC', 'Comic Sans MS', cursive;
+  --font-sans: 'Nunito', system-ui, -apple-system, sans-serif;
   --font-script: 'Kaushan Script', cursive;
 
   /* Transiciones */
@@ -81,8 +96,13 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-page);
+  background-image:
+    radial-gradient(rgba(47, 53, 66, 0.035) 1px, transparent 1px),
+    radial-gradient(rgba(47, 53, 66, 0.025) 1px, transparent 1px);
+  background-size: 22px 22px, 22px 22px;
+  background-position: 0 0, 11px 11px;
   color: var(--text-primary);
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -94,9 +114,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   color: var(--color-primary);
-  line-height: 1.25;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 h1 {
@@ -169,7 +189,14 @@ button {
 }
 
 .section-alt {
-  background-color: #f0f2fa;
+  background-color: var(--paper-alt);
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 31px,
+    rgba(47, 53, 66, 0.055) 31px,
+    rgba(47, 53, 66, 0.055) 32px
+  );
 }
 
 .section-dark {

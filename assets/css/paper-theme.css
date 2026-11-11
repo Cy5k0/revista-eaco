@@ -1,0 +1,1386 @@
+/* ==========================================================================
+   VOCES EN PAPEL - REVISTA ESCOLAR
+   paper-theme.css: Capa de tema "periódico escolar infantil" sobre PaperCSS
+   Se carga después de global.css, components.css y utilities.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES DE PAPERCSS Y BASE
+   -------------------------------------------------------------------------- */
+html {
+  --primary: #2f3542;
+  --secondary: #2d6cdf;
+  --success: #4f9d69;
+  --warning: #f2b705;
+  --danger: #c7441f;
+  --muted: #8b8b8b;
+  --primary-light: #cdcccb;
+  --secondary-light: #d8ebfd;
+  --success-light: #d5dfc8;
+  --warning-light: #f5f0c6;
+  --danger-light: #f0cbc9;
+  --muted-light: #e6e7e9;
+  --main-background: #fffdf4;
+  --main-background-light: #fffdf4;
+  --primary-text: #2f3542;
+  --secondary-text: #1f4f9e;
+  --success-text: #2f6b43;
+  --warning-text: #7a5c00;
+  --danger-text: #a3351c;
+  --muted-text: #6c6c6c;
+}
+
+/* La base de PaperCSS añade subrayados ondulados y estilos de nav/botón que
+   no queremos en todos los enlaces ni en los contenedores del sitio. */
+a {
+  background-image: none;
+}
+
+nav {
+  background-color: transparent;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.section {
+  margin: 0;
+  padding: 5rem 0;
+}
+
+.section::after {
+  content: none;
+}
+
+hr::after {
+  content: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
+}
+
+p,
+a,
+li,
+button,
+input,
+textarea,
+select,
+option,
+table,
+th,
+td {
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: none;
+}
+
+ul li {
+  text-indent: 0;
+}
+
+::selection {
+  background-color: rgba(242, 183, 5, 0.55);
+  color: var(--ink);
+}
+
+/* Foco visible y accesible en toda la interfaz */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px dashed var(--crayon-blue);
+  outline-offset: 3px;
+}
+
+.dia-libro-card:focus-visible,
+.staff-search-input:focus-visible {
+  outline: 3px dashed var(--crayon-blue);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   2. NAVBAR
+   -------------------------------------------------------------------------- */
+.navbar {
+  display: block;
+  background-color: rgba(255, 253, 244, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 3px solid var(--ink);
+  box-shadow: 0 4px 0 rgba(47, 53, 66, 0.08);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  padding: 0.85rem 1.5rem;
+}
+
+/* PaperCSS dibuja un borde inferior de 5px en todos los enlaces dentro de
+   <nav>; aquí no lo queremos (el subrayado propio vive en .nav-link::after). */
+.navbar .nav-link,
+.navbar .navbar-logo {
+  border-bottom: 0;
+  border-radius: 0;
+  background-image: none;
+}
+
+.navbar-logo {
+  flex-shrink: 0;
+}
+
+.navbar-logo img {
+  filter: drop-shadow(2px 3px 0 rgba(47, 53, 66, 0.18));
+}
+
+.navbar-title {
+  color: var(--crayon-blue);
+  font-size: 1.6rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  text-shadow: none;
+}
+
+.navbar-subtitle {
+  color: var(--ink-soft);
+  font-family: var(--font-serif);
+  font-size: 0.74rem;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+}
+
+.navbar-menu {
+  flex-wrap: nowrap;
+  gap: 0.95rem;
+}
+
+.nav-link {
+  display: block;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.35;
+  white-space: nowrap;
+  padding: 0.4rem 0.1rem 0.5rem 0.1rem;
+}
+
+.nav-link::after {
+  bottom: 0.15rem;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 3px;
+  opacity: 0.9;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--crayon-blue);
+}
+
+.btn-navbar {
+  background: var(--color-accent);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  border: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: 4px 5px 0 rgba(47, 53, 66, 0.18);
+  transform: rotate(-1.5deg);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.btn-navbar:hover {
+  background: var(--color-accent-hover);
+  transform: rotate(-1.5deg) translateY(-2px);
+  box-shadow: 6px 8px 0 rgba(47, 53, 66, 0.18);
+}
+
+.navbar-toggle {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0.4rem;
+}
+
+.navbar-toggle span {
+  background-color: var(--ink);
+}
+
+@media (max-width: 1080px) {
+  /* Por debajo de ~1080px el menú horizontal ya no cabe: se usa el mismo
+     desplegable que en móvil para evitar desbordamiento. */
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.15rem;
+    padding: 1.5rem 2rem 2.25rem 2rem;
+    background-color: var(--paper);
+    border-bottom: 3px solid var(--ink);
+    box-shadow: 0 12px 0 rgba(47, 53, 66, 0.12);
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: all var(--transition-normal);
+  }
+
+  .navbar-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navbar-menu .nav-link {
+    color: var(--ink);
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.45rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.6rem 1rem;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar-subtitle {
+    display: none;
+  }
+
+  .navbar-title {
+    font-size: 1.3rem;
+  }
+
+  .navbar-logo {
+    gap: 0.6rem;
+  }
+
+  .navbar-logo img {
+    height: 40px;
+  }
+
+  .navbar .btn-navbar {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. HERO / PORTADA
+   -------------------------------------------------------------------------- */
+.hero {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(rgba(47, 53, 66, 0.03) 1px, transparent 1px),
+    radial-gradient(rgba(242, 183, 5, 0.10) 1px, transparent 1px);
+  background-size: 22px 22px, 22px 22px;
+  background-position: 0 0, 11px 11px;
+  color: var(--ink);
+  border-bottom: 3px double var(--ink);
+  padding: 5.5rem 0 4.5rem 0;
+}
+
+.hero::after {
+  content: none;
+}
+
+.hero h1 {
+  color: var(--ink);
+  font-size: clamp(3rem, 6.5vw, 5rem);
+  line-height: 0.98;
+  text-shadow: 2px 3px 0 rgba(242, 183, 5, 0.45);
+}
+
+.hero h1 span {
+  color: var(--crayon-blue);
+  font-size: 0.42em;
+  margin-top: 0.65rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  color: var(--ink-soft);
+  font-size: 1.12rem;
+}
+
+.hero-badge {
+  background-color: var(--color-accent);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  box-shadow: 3px 4px 0 rgba(47, 53, 66, 0.16);
+  transform: rotate(-1.5deg);
+}
+
+.hero-actions {
+  gap: 1.1rem;
+}
+
+.hero-stats {
+  border-top: 2px dashed var(--border-medium);
+  gap: 2rem;
+}
+
+.hero-stat-number {
+  color: var(--crayon-red);
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 0 rgba(242, 183, 5, 0.4);
+}
+
+.hero-stat-label {
+  color: var(--ink-soft);
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.about-carousel {
+  border: 10px solid #ffffff;
+  border-radius: 4px;
+  box-shadow: 8px 10px 0 rgba(47, 53, 66, 0.12);
+  transform: rotate(-1.5deg);
+  overflow: visible;
+}
+
+.carousel-slide {
+  border-radius: 2px;
+}
+
+.about-carousel::after {
+  content: '';
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  width: 92px;
+  height: 26px;
+  background-color: var(--tape);
+  border-left: 1px dashed rgba(122, 92, 0, 0.35);
+  border-right: 1px dashed rgba(122, 92, 0, 0.35);
+  transform: translateX(-50%) rotate(-3deg);
+  z-index: 3;
+}
+
+/* --------------------------------------------------------------------------
+   4. BOTONES
+   -------------------------------------------------------------------------- */
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  font-weight: 400;
+  box-shadow: 4px 5px 0 rgba(47, 53, 66, 0.16);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translate(-1px, -2px) rotate(-0.5deg);
+  box-shadow: 6px 8px 0 rgba(47, 53, 66, 0.16);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--ink);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.btn-secondary {
+  background-color: var(--paper);
+  color: var(--crayon-blue);
+  border-color: var(--crayon-blue);
+  backdrop-filter: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--crayon-blue);
+  color: #ffffff;
+}
+
+.btn-outline {
+  background-color: var(--paper);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.btn-outline:hover {
+  background-color: var(--ink);
+  color: var(--paper);
+}
+
+.btn-sm {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-pdf {
+  background: var(--crayon-red);
+  color: #ffffff !important;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: 3px 4px 0 rgba(47, 53, 66, 0.18);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.btn-pdf:hover {
+  background: #a83a1a;
+  transform: translate(-1px, -2px);
+  box-shadow: 5px 7px 0 rgba(47, 53, 66, 0.18);
+}
+
+/* PaperCSS aplica margen inferior y alineación a todos los <button>. */
+.filter-btn,
+.game-tab-btn,
+.navbar-toggle,
+.lightbox-close,
+.lightbox-nav,
+.btn-libro-view,
+.scroll-to-top {
+  margin: 0;
+  font-family: var(--font-serif);
+}
+
+.lightbox-close,
+.lightbox-nav,
+.scroll-to-top {
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. ENCABEZADOS DE SECCIÓN
+   -------------------------------------------------------------------------- */
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-tag {
+  background-color: var(--tape);
+  color: var(--ink);
+  border: none;
+  border-radius: 2px;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  padding: 0.35rem 1.1rem;
+  transform: rotate(-1.5deg);
+  box-shadow: 2px 3px 0 rgba(47, 53, 66, 0.1);
+}
+
+.section-header h2 {
+  display: inline;
+  background-image: linear-gradient(transparent 62%, rgba(242, 183, 5, 0.55) 62%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 0 0.1em;
+}
+
+.section-header p {
+  color: var(--ink-soft);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. TARJETAS DE ARTÍCULOS
+   -------------------------------------------------------------------------- */
+.articles-grid {
+  gap: 2.25rem;
+}
+
+.article-card {
+  background-color: var(--paper);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-paper);
+  box-shadow: var(--shadow-xl);
+  overflow: visible;
+  transform: rotate(-0.35deg);
+}
+
+.articles-grid > .article-card:nth-child(3n + 2) {
+  transform: rotate(0.4deg);
+}
+
+.articles-grid > .article-card:nth-child(3n) {
+  transform: rotate(-0.15deg);
+}
+
+.article-card:hover {
+  transform: translateY(-5px) rotate(0deg);
+  border-color: var(--ink);
+  box-shadow: 10px 16px 0 rgba(47, 53, 66, 0.1);
+}
+
+.article-card::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 76px;
+  height: 24px;
+  background-color: var(--tape);
+  border-left: 1px dashed rgba(122, 92, 0, 0.3);
+  border-right: 1px dashed rgba(122, 92, 0, 0.3);
+  transform: translateX(-50%) rotate(-2deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.article-card-header {
+  padding: 1.6rem 1.5rem 0.75rem 1.5rem;
+}
+
+.article-badge {
+  border: 1.5px solid rgba(47, 53, 66, 0.35);
+  border-radius: var(--radius-paper-sm);
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+.article-course-tag {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.article-card-body {
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.article-card-title {
+  font-size: 1.45rem;
+  color: var(--ink);
+}
+
+.article-card-excerpt {
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+}
+
+.article-card-footer {
+  border-top: 2px dashed var(--border-light);
+}
+
+.author-avatar {
+  background: var(--color-accent);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: 2px 2px 0 rgba(47, 53, 66, 0.15);
+}
+
+.author-name {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.author-role {
+  color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------------------------
+   7. COLUMNAS DE OPINIÓN
+   -------------------------------------------------------------------------- */
+.opinion-card {
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 31px,
+    rgba(45, 108, 223, 0.12) 31px,
+    rgba(45, 108, 223, 0.12) 32px
+  );
+  border: 2px solid var(--border-medium);
+  border-top: 2px solid var(--crayon-blue);
+  border-radius: var(--radius-paper);
+  box-shadow: var(--shadow-xl);
+  transform: rotate(0.5deg);
+}
+
+.opinion-container > .opinion-card:nth-child(even) {
+  transform: rotate(-0.6deg);
+}
+
+.opinion-card:hover {
+  transform: translateY(-5px) rotate(0deg);
+  border-color: var(--crayon-blue);
+}
+
+/* La comilla decorativa de components.css no encaja con el papel rayado:
+   el texto ya usa comillas latinas («»), así que se omite. */
+.opinion-card::before {
+  content: none;
+}
+
+.opinion-card::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 76px;
+  height: 24px;
+  background-color: var(--tape);
+  border-left: 1px dashed rgba(122, 92, 0, 0.3);
+  border-right: 1px dashed rgba(122, 92, 0, 0.3);
+  transform: translateX(-50%) rotate(2deg);
+  pointer-events: none;
+}
+
+.opinion-theme {
+  color: var(--crayon-red);
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  letter-spacing: 1px;
+}
+
+.opinion-title {
+  font-size: 1.55rem;
+}
+
+.opinion-quote {
+  font-style: normal;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+.opinion-author {
+  border-top: 2px dashed var(--border-light);
+}
+
+/* --------------------------------------------------------------------------
+   8. REPORTAJE CENTRAL: TRAFKINTU (MODO OSCURO CONSERVADO)
+   -------------------------------------------------------------------------- */
+.trafkintu-hero {
+  background-color: #14351f;
+  background-image:
+    radial-gradient(rgba(231, 231, 138, 0.07) 1px, transparent 1px),
+    linear-gradient(135deg, #1b3824 0%, #0d2014 100%);
+  background-size: 18px 18px, 100% 100%;
+  border: 2px solid rgba(231, 231, 138, 0.35);
+  border-radius: var(--radius-paper);
+  box-shadow: 12px 18px 0 -6px rgba(20, 53, 31, 0.18);
+}
+
+.trafkintu-tag {
+  background-color: var(--color-accent);
+  color: #14351f;
+  border: 2px solid #14351f;
+  border-radius: var(--radius-paper-sm);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 0.95rem;
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.25);
+  transform: rotate(-1deg);
+}
+
+.trafkintu-title {
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.trafkintu-lead {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.trafkintu-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.pillar-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px dashed rgba(231, 231, 138, 0.4);
+  border-radius: var(--radius-paper-sm);
+}
+
+.pillar-card h4 {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+}
+
+.trafkintu-showcase {
+  border: 8px solid #fffdf4;
+  border-radius: 4px;
+  box-shadow: 8px 10px 0 rgba(0, 0, 0, 0.3);
+  transform: rotate(1.2deg);
+}
+
+/* --------------------------------------------------------------------------
+   9. ¿QUIÉN SOY? Y DÍA DEL LIBRO
+   -------------------------------------------------------------------------- */
+.quien-card {
+  position: relative;
+  background-color: var(--paper);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: var(--shadow-lg);
+  transform: rotate(-0.5deg);
+}
+
+.quien-grid > .quien-card:nth-child(even) {
+  transform: rotate(0.6deg);
+}
+
+.quien-card:hover {
+  transform: translateY(-4px) rotate(0deg);
+  border-color: var(--ink);
+}
+
+.quien-card::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 62px;
+  height: 20px;
+  background-color: var(--tape);
+  transform: translateX(-50%) rotate(-2deg);
+  pointer-events: none;
+}
+
+.quien-avatar {
+  border: 3px solid var(--ink);
+  background-color: var(--color-accent);
+  box-shadow: 3px 3px 0 rgba(47, 53, 66, 0.15);
+}
+
+.quien-name {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.quien-tag {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.dia-libro-card {
+  position: relative;
+  background-color: var(--paper);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: var(--shadow-lg);
+  overflow: visible;
+  transform: rotate(-0.4deg);
+}
+
+.dia-libro-grid > .dia-libro-card:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+.dia-libro-card:hover,
+.dia-libro-card:focus-visible {
+  transform: translateY(-5px) rotate(0deg);
+  border-color: var(--crayon-blue);
+}
+
+.dia-libro-card::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 62px;
+  height: 20px;
+  background-color: var(--tape);
+  transform: translateX(-50%) rotate(2deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.dia-libro-media {
+  background-color: var(--paper-alt);
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+/* Los afiches son infografías verticales: conviene verlas completas antes que
+   recortadas, así que la imagen se ajusta dentro del marco. */
+.dia-libro-media img {
+  object-fit: contain;
+  padding: 0.6rem;
+  background-color: var(--paper-alt);
+}
+
+.dia-libro-badge {
+  background-color: var(--color-accent);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.dia-libro-zoom {
+  background: var(--paper);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: 2px 3px 0 rgba(47, 53, 66, 0.15);
+}
+
+.dia-libro-title {
+  font-size: 1.35rem;
+}
+
+.dia-libro-desc {
+  color: var(--ink-soft);
+}
+
+.btn-libro-view {
+  background: var(--paper);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  font-size: 0.95rem;
+  box-shadow: 3px 4px 0 rgba(47, 53, 66, 0.12);
+}
+
+.dia-libro-card:hover .btn-libro-view,
+.dia-libro-card:focus-visible .btn-libro-view {
+  background: var(--color-accent);
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+/* --------------------------------------------------------------------------
+   10. GALERÍAS Y FILTROS
+   -------------------------------------------------------------------------- */
+.gallery-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  background: transparent;
+  padding: 0;
+}
+
+.filter-btn {
+  background: var(--paper);
+  color: var(--ink-soft);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: 2px 3px 0 rgba(47, 53, 66, 0.1);
+  font-size: 0.95rem;
+  padding: 0.5rem 1.15rem;
+}
+
+.filter-btn:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  transform: rotate(-1deg);
+}
+
+.filter-btn.active {
+  background: var(--color-accent);
+  color: var(--ink);
+  border-color: var(--ink);
+  box-shadow: 3px 4px 0 rgba(47, 53, 66, 0.18);
+}
+
+.gallery-item {
+  background-color: #ffffff;
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: var(--shadow-lg);
+  padding: 6px;
+  overflow: visible;
+  transform: rotate(-0.5deg);
+}
+
+.gallery-grid > .gallery-item:nth-child(3n + 2) {
+  transform: rotate(0.5deg);
+}
+
+.gallery-grid > .gallery-item:nth-child(3n) {
+  transform: rotate(-0.2deg);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px) rotate(0deg);
+  border-color: var(--ink);
+}
+
+.gallery-item img {
+  border-radius: 4px;
+}
+
+.gallery-overlay {
+  inset: 6px;
+  border-radius: 4px;
+  background: linear-gradient(to top, rgba(31, 36, 48, 0.92) 0%, rgba(31, 36, 48, 0.18) 65%, transparent 100%);
+}
+
+.gallery-item-title {
+  color: var(--color-accent);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.gallery-item-cat {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.gallery-zoom-icon {
+  background: var(--paper);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+}
+
+/* --------------------------------------------------------------------------
+   11. LIGHTBOX
+   -------------------------------------------------------------------------- */
+.lightbox {
+  background-color: rgba(31, 36, 48, 0.94);
+}
+
+.lightbox-img {
+  background-color: var(--paper);
+  border: 10px solid var(--paper);
+  border-radius: 4px;
+  box-shadow: 10px 14px 0 rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-caption {
+  color: var(--paper);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+}
+
+.lightbox-close,
+.lightbox-nav {
+  background: var(--paper);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 50% 46% 54% 48%;
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.25);
+  font-family: var(--font-serif);
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: var(--color-accent);
+  color: var(--ink);
+}
+
+.lightbox-close {
+  font-size: 1.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   12. JUEGOS EDUCAPLAY
+   -------------------------------------------------------------------------- */
+.games-container {
+  background-color: var(--paper);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-paper);
+  box-shadow: var(--shadow-xl);
+}
+
+.games-tabs {
+  gap: 0.85rem;
+}
+
+.game-tab-btn {
+  background: var(--paper);
+  color: var(--ink-soft);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: 2px 3px 0 rgba(47, 53, 66, 0.1);
+  font-size: 1rem;
+  padding: 0.65rem 1.5rem;
+}
+
+.game-tab-btn:hover {
+  background: var(--paper-alt);
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.game-tab-btn.active {
+  background: var(--color-accent);
+  color: var(--ink);
+  border-color: var(--ink);
+  box-shadow: 3px 4px 0 rgba(47, 53, 66, 0.18);
+}
+
+#game-title {
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.game-intro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#game-desc {
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.game-frame-wrapper {
+  background: var(--paper-alt);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: 6px 8px 0 rgba(47, 53, 66, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   13. STAFF / REDACCIÓN
+   -------------------------------------------------------------------------- */
+.staff-search-input {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: 3px 4px 0 rgba(47, 53, 66, 0.1);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+.staff-search-input:focus {
+  border-color: var(--crayon-blue);
+  box-shadow: 0 0 0 4px rgba(45, 108, 223, 0.15);
+}
+
+.staff-search-icon {
+  color: var(--ink-soft);
+}
+
+.staff-card {
+  position: relative;
+  background-color: var(--paper);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: var(--shadow-md);
+  transform: rotate(-0.5deg);
+}
+
+.staff-grid > .staff-card:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+.staff-card:hover {
+  transform: translateY(-4px) rotate(0deg);
+  border-color: var(--ink);
+}
+
+.staff-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 54px;
+  height: 18px;
+  background-color: var(--tape);
+  transform: translateX(-50%) rotate(-2deg);
+  pointer-events: none;
+}
+
+.staff-avatar {
+  border: 3px solid var(--ink);
+  background-color: var(--color-accent);
+  box-shadow: 3px 3px 0 rgba(47, 53, 66, 0.15);
+}
+
+.staff-name {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 400;
+}
+
+.staff-role {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------------------------
+   14. FOOTER
+   -------------------------------------------------------------------------- */
+.footer {
+  background-color: var(--paper-alt);
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 31px,
+    rgba(47, 53, 66, 0.05) 31px,
+    rgba(47, 53, 66, 0.05) 32px
+  );
+  color: var(--ink);
+  border-top: 3px double var(--ink);
+}
+
+.footer-top-decoration {
+  height: 8px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-accent) 0,
+    var(--color-accent) 10px,
+    var(--paper) 10px,
+    var(--paper) 20px,
+    var(--crayon-blue) 20px,
+    var(--crayon-blue) 30px,
+    var(--paper) 30px,
+    var(--paper) 40px
+  );
+}
+
+.footer-title-script {
+  color: var(--crayon-blue);
+}
+
+.footer-tagline {
+  color: var(--ink-soft);
+  font-family: var(--font-serif);
+  letter-spacing: 1.2px;
+}
+
+.footer-text {
+  color: var(--ink-soft);
+}
+
+.footer-badge {
+  background: var(--color-accent);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  font-weight: 400;
+}
+
+.footer-heading {
+  color: var(--ink);
+  font-size: 1.35rem;
+}
+
+.footer-link {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.footer-link:hover {
+  color: #a83a1a;
+}
+
+.footer-contact {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.footer-link-highlight {
+  color: var(--crayon-blue);
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 3px;
+}
+
+.footer-link-highlight:hover {
+  color: #a83a1a;
+}
+
+.footer-bottom {
+  border-top: 2px dashed var(--border-medium);
+  background-color: transparent;
+}
+
+.footer-bottom-content {
+  color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------------------------
+   15. BOTÓN VOLVER ARRIBA Y ANIMACIONES
+   -------------------------------------------------------------------------- */
+.scroll-to-top {
+  background-color: var(--color-accent);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  box-shadow: 4px 5px 0 rgba(47, 53, 66, 0.2);
+  font-family: var(--font-serif);
+}
+
+.scroll-to-top:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--ink);
+  box-shadow: 6px 8px 0 rgba(47, 53, 66, 0.2);
+  transform: translateY(-3px) rotate(-3deg);
+}
+
+/* Solo opacidad: así las rotaciones y los hover de las tarjetas no se pierden
+   cuando el observador de scroll añade .fade-in-up. */
+@keyframes paperFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: paperFadeIn 0.6s ease forwards;
+}
+
+/* --------------------------------------------------------------------------
+   16. RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0 3.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 12vw, 3.6rem);
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
+  }
+
+  .about-carousel {
+    transform: none;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-card,
+  .opinion-card,
+  .quien-card,
+  .dia-libro-card,
+  .staff-card,
+  .gallery-item {
+    transform: none;
+  }
+
+  .hero h1 {
+    text-shadow: 1px 2px 0 rgba(242, 183, 5, 0.45);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   17. ACCESIBILIDAD: MOVIMIENTO REDUCIDO E IMPRESIÓN
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .article-card,
+  .opinion-card,
+  .quien-card,
+  .dia-libro-card,
+  .staff-card,
+  .gallery-item,
+  .about-carousel,
+  .trafkintu-showcase,
+  .btn-navbar,
+  .section-tag,
+  .hero-badge {
+    transform: none !important;
+  }
+}
+
+@media print {
+  .navbar,
+  .footer,
+  .lightbox,
+  .scroll-to-top,
+  .hero-actions,
+  .gallery-filter-bar,
+  .games-container {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .section {
+    padding: 1.5rem 0;
+    break-inside: avoid;
+  }
+
+  .article-card,
+  .opinion-card,
+  .quien-card,
+  .dia-libro-card,
+  .staff-card,
+  .gallery-item {
+    box-shadow: none;
+    border: 1px solid #999999;
+    transform: none;
+  }
+}
