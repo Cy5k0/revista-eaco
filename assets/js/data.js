@@ -73,7 +73,7 @@ const REVISTA_DATA = {
     {
       id: "inv-6",
       titulo: "Desigualdad Social: Miradas desde la Educación",
-      autor: "Nicolás Pérez",
+      autor: "Nicolás Catalán",
       curso: "8vo Básico A",
       categoria: "Sociedad",
       badgeClass: "badge-sociedad",
