@@ -88,7 +88,7 @@ const REVISTA_DATA = {
       curso: "6to Básico",
       categoria: "Historia",
       badgeClass: "badge-historia",
-      avatarImg: "assets/img/staff/Magdalena Vera.webp",
+      avatarImg: "assets/img/staff/Yurianis Pérez.webp",
       extracto: "Arqueología, astronomía y teorías sorprendentes sobre cómo se construyeron los monumentos más imponentes de la antigüedad.",
       urlPdf: "https://drive.google.com/file/d/1X8VzB9XUppr-66OYwpBbV7yVHvf6xh0z/view?usp=sharing"
     },
@@ -110,7 +110,7 @@ const REVISTA_DATA = {
       curso: "6to Básico",
       categoria: "Innovación",
       badgeClass: "badge-ciencia",
-      avatarImg: "assets/img/staff/Alex Klenner.webp",
+      avatarImg: "assets/img/staff/Agustín Barría.webp",
       extracto: "Desde la rueda y la imprenta hasta la electricidad y el internet: un viaje por las grandes creaciones que marcaron un antes y un después.",
       urlPdf: "https://drive.google.com/file/d/1Yv1m-P_sA3bd-sdioQdUanSM2dubrGeJ/view?usp=sharing"
     }
@@ -194,6 +194,7 @@ const REVISTA_DATA = {
   ],
 
   staff: [
+    { nombre: "Agustín Barría", rol: "Innovación y Ciencia", foto: "assets/img/staff/Agustín Barría.webp" },
     { nombre: "Alan Villegas", rol: "Redactor Estudiantil", foto: "assets/img/staff/Alan Villegas.webp" },
     { nombre: "Alex Klenner", rol: "Redactor e Investigador", foto: "assets/img/staff/Alex Klenner.webp" },
     { nombre: "Alfonsina Boldt", rol: "Diseño y Redacción", foto: "assets/img/staff/alfonsina boldt_.webp" },
@@ -204,6 +205,7 @@ const REVISTA_DATA = {
     { nombre: "Cristóbal Manríquez", rol: "Investigación Digital", foto: "assets/img/staff/Cristóbal Manríquez.webp" },
     { nombre: "Dante Aburto", rol: "Redactor Escolar", foto: "assets/img/staff/Dante Aburto.webp" },
     { nombre: "Diego Matheus", rol: "Ciencia y Espacio", foto: "assets/img/staff/Diego Matheus.webp" },
+    { nombre: "Eduardo Cárdenas", rol: "Redactor Estudiantil", foto: "assets/img/staff/Eduardo Cárdenas.webp" },
     { nombre: "Emilio Villegas", rol: "Tecnología e IA", foto: "assets/img/staff/Emilio Villegas.webp" },
     { nombre: "Emily Miralles", rol: "Reportera Cultural", foto: "assets/img/staff/Emily Miralles.webp" },
     { nombre: "Esperanza Ollivet-Besson", rol: "Redacción Creativa", foto: "assets/img/staff/esperanza ollivet-besson_.webp" },
@@ -227,7 +229,8 @@ const REVISTA_DATA = {
     { nombre: "Nicolás Catalán", rol: "Investigación Social", foto: "assets/img/staff/Nicolás Catalán.webp" },
     { nombre: "Rubén Peña", rol: "Periodismo y Comunidad", foto: "assets/img/staff/Rubén Peña.webp" },
     { nombre: "Smiljan Martinovic", rol: "Redactor Estudiantil", foto: "assets/img/staff/Smiljan Martinovic.webp" },
-    { nombre: "Tomás Vilugrón", rol: "Redactor y Deportes", foto: "assets/img/staff/Tomás Vilugrón.webp" }
+    { nombre: "Tomás Vilugrón", rol: "Redactor y Deportes", foto: "assets/img/staff/Tomás Vilugrón.webp" },
+    { nombre: "Yurianis Pérez", rol: "Historia e Investigación", foto: "assets/img/staff/Yurianis Pérez.webp" }
   ],
 
   galerias: [
