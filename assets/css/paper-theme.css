@@ -1157,7 +1157,144 @@ input:focus-visible,
 }
 
 /* --------------------------------------------------------------------------
-   14. FOOTER
+   14. AGRADECIMIENTOS ESPECIALES
+   -------------------------------------------------------------------------- */
+.gratitude-card {
+  position: relative;
+  background-color: var(--paper);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-paper);
+  box-shadow: var(--shadow-xl);
+  padding: 2.5rem;
+  transform: rotate(-0.3deg);
+  transition: transform var(--transition-normal), border-color var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.gratitude-card:hover {
+  transform: rotate(0deg);
+  border-color: var(--ink);
+}
+
+.gratitude-card::before {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  width: 96px;
+  height: 26px;
+  background-color: var(--tape);
+  border-left: 1px dashed rgba(122, 92, 0, 0.35);
+  border-right: 1px dashed rgba(122, 92, 0, 0.35);
+  transform: translateX(-50%) rotate(-2deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gratitude-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.gratitude-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: var(--color-accent);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-paper-sm);
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  padding: 0.3rem 0.95rem;
+  margin-bottom: 1rem;
+  box-shadow: 3px 4px 0 rgba(47, 53, 66, 0.14);
+  transform: rotate(-1deg);
+}
+
+.gratitude-title {
+  font-size: clamp(1.7rem, 3vw, 2.25rem);
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+}
+
+.gratitude-role {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--crayon-blue);
+  margin-bottom: 1.25rem;
+}
+
+.gratitude-text {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.gratitude-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.gratitude-topic {
+  background-color: var(--paper-alt);
+  color: var(--ink);
+  border: 1.5px dashed var(--border-medium);
+  border-radius: var(--radius-paper-sm);
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  padding: 0.3rem 0.85rem;
+}
+
+.gratitude-media {
+  position: relative;
+  background-color: #ffffff;
+  border: 8px solid #ffffff;
+  border-radius: 4px;
+  box-shadow: 8px 10px 0 rgba(47, 53, 66, 0.14);
+  transform: rotate(1.2deg);
+  margin: 0;
+}
+
+.gratitude-media::after {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  width: 80px;
+  height: 22px;
+  background-color: var(--tape);
+  border-left: 1px dashed rgba(122, 92, 0, 0.35);
+  border-right: 1px dashed rgba(122, 92, 0, 0.35);
+  transform: translateX(-50%) rotate(2.5deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gratitude-media img {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.gratitude-caption {
+  padding: 0.75rem 0.4rem 0.2rem 0.4rem;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  text-align: center;
+  line-height: 1.35;
+}
+
+/* --------------------------------------------------------------------------
+   15. FOOTER
    -------------------------------------------------------------------------- */
 .footer {
   background-color: var(--paper-alt);
@@ -1251,7 +1388,7 @@ input:focus-visible,
 }
 
 /* --------------------------------------------------------------------------
-   15. BOTÓN VOLVER ARRIBA Y ANIMACIONES
+   16. BOTÓN VOLVER ARRIBA Y ANIMACIONES
    -------------------------------------------------------------------------- */
 .scroll-to-top {
   background-color: var(--color-accent);
@@ -1285,8 +1422,20 @@ input:focus-visible,
 }
 
 /* --------------------------------------------------------------------------
-   16. RESPONSIVE
+   17. RESPONSIVE
    -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .gratitude-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .gratitude-media {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 4rem 0 3.5rem 0;
@@ -1304,6 +1453,10 @@ input:focus-visible,
     transform: none;
   }
 
+  .gratitude-card {
+    padding: 1.75rem;
+  }
+
   .section {
     padding: 4rem 0;
   }
@@ -1315,7 +1468,9 @@ input:focus-visible,
   .quien-card,
   .dia-libro-card,
   .staff-card,
-  .gallery-item {
+  .gallery-item,
+  .gratitude-card,
+  .gratitude-media {
     transform: none;
   }
 
@@ -1325,7 +1480,7 @@ input:focus-visible,
 }
 
 /* --------------------------------------------------------------------------
-   17. ACCESIBILIDAD: MOVIMIENTO REDUCIDO E IMPRESIÓN
+   18. ACCESIBILIDAD: MOVIMIENTO REDUCIDO E IMPRESIÓN
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -1343,6 +1498,9 @@ input:focus-visible,
   .dia-libro-card,
   .staff-card,
   .gallery-item,
+  .gratitude-card,
+  .gratitude-media,
+  .gratitude-badge,
   .about-carousel,
   .trafkintu-showcase,
   .btn-navbar,
@@ -1378,7 +1536,9 @@ input:focus-visible,
   .quien-card,
   .dia-libro-card,
   .staff-card,
-  .gallery-item {
+  .gallery-item,
+  .gratitude-card,
+  .gratitude-media {
     box-shadow: none;
     border: 1px solid #999999;
     transform: none;

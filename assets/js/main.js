@@ -541,7 +541,7 @@ function initScrollEffects() {
   });
 
   // Animación Fade-in-up al entrar en pantalla
-  const animatedElements = document.querySelectorAll('.article-card, .opinion-card, .quien-card, .pillar-card');
+  const animatedElements = document.querySelectorAll('.article-card, .opinion-card, .quien-card, .pillar-card, .gratitude-card');
   const scrollObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
